@@ -1,4 +1,4 @@
-export const addTodo = (text)=> ({
-  type: 'ADD_TODO',
-  text
+export const MENUS_LOADED = (menuItems)=> ({
+  type: 'MENUS_LOADED',
+  menuItems
 });

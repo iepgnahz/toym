@@ -1,11 +1,11 @@
 /**
  * Created by jae on 16-8-13.
  */
-const people=(state=[],action)=>{
+const menu=(state=[],action)=>{
   switch (action.type){
-  case'PEOPLE_LOADED':
+  case'MENUS_LOADED':
     return action.data;
   }
   return state;
 };
-export default people;
+export default menu;

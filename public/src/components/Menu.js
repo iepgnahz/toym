@@ -2,19 +2,19 @@
  * Created by jae on 16-8-13.
  */
 import React, {Component} from 'react';// eslint-disable-line no-unused-vars
-import PersonItem from './PersonItem';
+import MenuItem from './MenuItem';
 
-class People extends Component {
+class Menu extends Component {
   render() {
-    
-    let people=this.props.people;
+    console.log(this.props);
+    let menu=this.props.menu;
     //let {people}=this.props;
     
     return (
         <div className="row">
           {
-            people.map((v, k)=> (
-                <PersonItem key={k} name={v.name} image={v.image}/>
+            menu.map((v, k)=> (
+                <MenuItem key={k} name={v.name} image={v.image}/>
             ))
           }
         </div>
@@ -23,4 +23,4 @@ class People extends Component {
   }
 }
 
-export default People;
+export default Menu;

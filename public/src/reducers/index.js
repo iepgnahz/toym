@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import result from './result';
-import people from './people';
+import menu from './menu';
 
 const resultList = combineReducers({
-  result,
-  people
+  menu
 });
 
 export default resultList;

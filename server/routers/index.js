@@ -1,8 +1,5 @@
-
 const regRouter = (app)=> {
-  app.use('/todos', require('./todos'));
-  app.use('/people', require('./people'));
-  
+  app.use('/menus', require('./menus'));
 };
 
 export default regRouter;

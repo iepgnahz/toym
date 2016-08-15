@@ -8,14 +8,13 @@
  }
  };*/
 import request from 'superagent';
-const peopleRequestMiddleware = store =>next=>action=> {// eslint-disable-line no-unused-vars
+const menuRequestMiddleware = store =>next=>action=> {// eslint-disable-line no-unused-vars
   switch (action.type) {
   case'INIT':
-    // console.log("+++++++++++++++++");
-    request.get('/people')
+    request.get('/menus')
         .end((err,res)=>{
           next({
-            type:'PEOPLE_LOADED',
+            type:'MENUS_LOADED',
             data:res.body
           });
             // console.log(res.body);
@@ -25,4 +24,4 @@ const peopleRequestMiddleware = store =>next=>action=> {// eslint-disable-line n
   next(action);
 };
 
-export default peopleRequestMiddleware;
+export default menuRequestMiddleware;

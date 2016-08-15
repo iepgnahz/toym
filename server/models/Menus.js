@@ -3,9 +3,9 @@
  */
 import mongoose from 'mongoose';
 
-const Person = mongoose.model('Person', {
+const Menus = mongoose.model('Menus', {
   name: String,
   image:String
 });
 
-export default Person;
+export default Menus;
