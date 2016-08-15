@@ -3,7 +3,7 @@ import people from '../../server/routers/menus'
 import request from 'supertest';
 
 describe('get /', ()=> {
-  fit('should return menuItem', (done)=> {
+  it('should return menuItem', (done)=> {
     request(app)
         .get('/menus')
         .expect(

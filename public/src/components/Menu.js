@@ -6,7 +6,6 @@ import MenuItem from './MenuItem';
 
 class Menu extends Component {
   render() {
-    console.log(this.props);
     let menu=this.props.menu;
     //let {people}=this.props;
     
@@ -14,7 +13,7 @@ class Menu extends Component {
         <div className="row">
           {
             menu.map((v, k)=> (
-                <MenuItem key={k} name={v.name} image={v.image}/>
+                <MenuItem key={k} name={v.name} image={v.image} date={v.date} description={v.description}/>
             ))
           }
         </div>

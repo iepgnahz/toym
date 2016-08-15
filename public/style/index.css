@@ -6,7 +6,15 @@
     width:80%;
     margin:auto;
 }
+.name1{
+    font-size: 22px;
+}
 
-.nav-li{
-    float:right;
+#food-description{
+    text-align: left;
+    font-size: 16px;
+}
+
+#date1{
+    font-size: 15px;
 }
