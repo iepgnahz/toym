@@ -1,4 +1,4 @@
-import React, {Component} from 'react';//一定要加引号
+import React,{Component} from 'react';// eslint-disable-line no-unused-vars
 
 class Logo extends Component {
   render() {
@@ -22,7 +22,7 @@ class Logo extends Component {
             </div>
           </nav>
         </div>
-    )
+    );
   }
 }
 

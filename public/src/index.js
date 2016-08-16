@@ -12,9 +12,6 @@ const store = createStore(
 
 );
 
-
-
-
 store.dispatch({
   type: 'INIT'
 });
