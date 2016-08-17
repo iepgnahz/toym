@@ -7,13 +7,15 @@ import MenuItem from './MenuItem';
 class Menu extends Component {
   render() {
     let menu = this.props.menu;
+
     //let {people}=this.props;
 
     return (
         <div className="row">
           {
             menu.map((v, k)=> (
-                <MenuItem key={k} name={v.name} image={v.image} date={v.date} description={v.description}/>
+                <MenuItem id={v._id} key={k} name={v.name} image={v.image} date={v.date} description={v.description}
+                          getId={this.props.getId}/>
             ))
           }
         </div>
@@ -21,5 +23,6 @@ class Menu extends Component {
     );
   }
 }
+
 
 export default Menu;

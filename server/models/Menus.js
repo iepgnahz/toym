@@ -4,7 +4,9 @@ const Menus = mongoose.model('Menus', {
   name: String,
   image: String,
   date: String,
-  description: String
+  description: String,
+  materials: Array,
+  steps: String
 });
 
 export default Menus;

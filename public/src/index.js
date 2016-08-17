@@ -5,20 +5,26 @@ import resultList from './reducers';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import menuRequestMiddleware from './middlewares/menuRequestMiddleware';
+import MenuDetailPackage  from './components/MenuDetailApp';
+import {Router, Route, browserHistory} from 'react-router';
+
 
 const store = createStore(
     resultList,
     applyMiddleware(menuRequestMiddleware)
-
 );
 
 store.dispatch({
   type: 'INIT'
 });
 
+
 render(
     <Provider store={store}>
-      <App/>
+      <Router history={browserHistory}>
+        <Route path="/menu" component={App}/>
+        <Route path='/menuDetail/:id' component={MenuDetailPackage}/>
+      </Router>
     </Provider>,
-  document.getElementById('app')
+    document.getElementById('app')
 );

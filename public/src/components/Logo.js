@@ -1,7 +1,10 @@
-import React,{Component} from 'react';// eslint-disable-line no-unused-vars
+import React, {Component} from 'react';// eslint-disable-line no-unused-vars
 
 class Logo extends Component {
+
   render() {
+
+
     return (
         <div className="food-body">
           <nav className="navbar navbar-default" role="navigation">

@@ -1,20 +1,22 @@
-.logo{
-    width:80%;
-    margin:auto;
-}
-.food-body{
-    width:80%;
-    margin:auto;
-}
-.name1{
-    font-size: 22px;
+.logo {
+  width: 80%;
+  margin: auto;
 }
 
-#food-description{
-    text-align: left;
-    font-size: 16px;
+.food-body {
+  width: 80%;
+  margin: auto;
 }
 
-#date1{
-    font-size: 15px;
+.name1 {
+  font-size: 22px;
+}
+
+#food-description {
+  text-align: left;
+  font-size: 16px;
+}
+
+#date1 {
+  font-size: 15px;
 }

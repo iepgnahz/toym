@@ -10,7 +10,7 @@
     "wpw": "webpack -w",
     "coverage": "istanbul cover jasmine",
     "eslint": "eslint app.js server/** public/src/**",
-    "refreshMongo":"babel-node ./server/tools/refreshMongo.js"
+    "refreshMongo": "babel-node ./server/tools/refreshMongo.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,10 +21,12 @@
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "express": "^4.14.0",
+    "markdown": "^0.5.0",
     "mongoose": "^4.5.8",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-redux": "^4.4.5",
+    "react-router": "^2.6.1",
     "redux": "^3.5.2",
     "superagent": "^2.1.0"
   },

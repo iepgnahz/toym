@@ -1,22 +1,9 @@
 import {combineReducers} from 'redux';
 import menu from './menu';
-
+import menuItem from './menuItem';
 const resultList = combineReducers({
-  menu
+  menu,
+  menuItem
 });
 
 export default resultList;
-/*
- const reducer = combineReducers({
- a: doSomethingWithA,
- b: processB,
- c: c
- })
- 或是：
- function reducer(state = {}, action) {
- return {
- a: doSomethingWithA(state.a, action),
- b: processB(state.b, action),
- c: c(state.c, action)
- }
- }*/

@@ -13,12 +13,12 @@ const menuRequestMiddleware = store =>next=>action=> {// eslint-disable-line no-
   switch (action.type) {
   case'INIT':
     request.get('/menus')
-        .end((err,res)=>{
+        .end((err, res)=> {
           next({
-            type:MENUS_LOADED,
-            data:res.body
+            type: MENUS_LOADED,
+            data: res.body
           });
-            // console.log(res.body);
+
         });
     break;
   }
