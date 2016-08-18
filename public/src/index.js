@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import menuRequestMiddleware from './middlewares/menuRequestMiddleware';
 import MenuDetailPackage  from './components/MenuDetailApp';
 import {Router, Route, browserHistory} from 'react-router';
+import MenuUpLoadApp from './components/MenuUpLoadApp';
 
 
 const store = createStore(
@@ -24,6 +25,7 @@ render(
       <Router history={browserHistory}>
         <Route path="/menu" component={App}/>
         <Route path='/menuDetail/:id' component={MenuDetailPackage}/>
+        <Route path='/menuUpLoad'   component={MenuUpLoadApp}/>
       </Router>
     </Provider>,
     document.getElementById('app')
