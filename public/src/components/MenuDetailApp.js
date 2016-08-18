@@ -13,7 +13,7 @@ class MenuDetailApp extends Component {
   }
 
   componentDidMount() {
-
+    this.props.loadPage(this.props.params.id);
     request
         .get(`/menus/${this.props.params.id}`)
         .end((err, res)=> {
@@ -40,6 +40,13 @@ const mapDispatchToProps = (dispatch)=> ({
 
   getMenuDetail: (data)=> {
     dispatch(loadMenuDetail(data));
+  },
+
+  loadPage: (url)=>{
+    dispatch({
+      type:'INIT_MENUDETAIL',
+      url
+    })
   }
 });
 var MenuDetailPackage = connect(mapStateToProps, mapDispatchToProps)(MenuDetailApp);

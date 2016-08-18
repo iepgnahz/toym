@@ -6,7 +6,7 @@ import {ID_GETTER} from '../actions/index';
 import {loadMenuDetail} from '../actions/index';
 
 
-var menuDetailRequestMiddleware = () => next => action => {
+var menuDetailRequestMiddleware = store => next => action => {
   switch (action.type) {
   case  ID_GETTER:
     request
@@ -15,7 +15,15 @@ var menuDetailRequestMiddleware = () => next => action => {
           next(loadMenuDetail(res.body));
         });
     break;
+    case 'INIT_MENUDETAIL':
+      request
+          .get(`/menus/${action.url}`)
+          .end((err, res)=> {
+            store.dispatch(loadMenuDetail(res.body));
+          });
+      break;
   }
+
   next(action);
 };
 

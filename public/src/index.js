@@ -11,8 +11,8 @@ import MenuUpLoadApp from './components/MenuUpLoadApp';
 
 
 const store = createStore(
-    resultList
-    // applyMiddleware(menuRequestMiddleware)
+    resultList,
+    applyMiddleware(menuRequestMiddleware)
 );
 
 store.dispatch({
