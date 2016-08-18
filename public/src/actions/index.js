@@ -10,7 +10,19 @@ export const loadMenuDetail = (data)=> {
   };
 };
 
+export const addMaterial = (data)=> ({
+  type: 'ADD_MATERIAL',
+  data
+});
+
+export const deleteMaterial = (id) => ({
+  type: 'DELETE_MATERIAL',
+  id
+});
+
 
 export const MENUDETAIL_LOADED = 'MENUDETAIL_LOADED';
 export const MENUS_LOADED = 'MENUS_LOADED';
 export const ID_GETTER = 'ID_GETTER';
+export const ADD_MATERIAL =  'ADD_MATERIAL';
+export const DELETE_MATERIAL = 'DELETE_MATERIAL';
