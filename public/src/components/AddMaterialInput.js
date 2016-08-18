@@ -3,7 +3,6 @@ import React, {Component} from 'react'; // eslint-disable-line no-unused-vars
 class AddMaterialInput extends Component {
 
   click() {
-
     let val1 = this.refs.sourceText.value.trim();
     let val2 = this.refs.amountText.value.trim();
     if (val1 && val2) {

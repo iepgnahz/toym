@@ -1,11 +1,14 @@
 import React, {Component} from 'react'; // eslint-disable-line no-unused-vars
 import {connect} from 'react-redux';
+import {deleteMaterial} from '../actions/index';
 
 class MaterialList extends Component {
+
   render() {
+
     let deleteMaterial = this.props.deleteMaterial;
     let result = this.props.result || [];
-    console.log(result);
+
 
     return (
         <div className="col-sm-8 col-sm-offset-2">
@@ -47,15 +50,12 @@ class MaterialList extends Component {
 }
 
 const mapStateToProps = (state)=> ({
-  result: state.result
+  result: state.uploadMaterials
 });
 
 const mapDispatchToProps = (dispatch)=> ({
   deleteMaterial: (id)=> {
-    dispatch({
-      type: 'DELETE_MATERIAL',
-      id
-    });
+    dispatch(deleteMaterial(id));
   }
 });
 
