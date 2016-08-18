@@ -12,15 +12,16 @@ class NameAndImage extends Component {
   render() {
     return (
         <div>
-          <h1 className="row"> {this.props.name}
-            <small className="col-sm-offset-7">上传时间:{this.props.date}</small>
-          </h1>
+          <div className="row">
+            <h1 className="text-left" style={{marginLeft:'2%'}}> {this.props.name}
+            <small style={{float:'right',marginRight:'2%',marginTop:'3%'}}>上传时间:{this.props.date}</small></h1>
+          </div>
           <div>
             <img src={'../../' + this.props.image} className="text-center img-responsive form-control "
                  style={{height: 500}}/>
           </div>
           <h3>简介</h3>
-          <textarea readOnly value={this.props.description} className="form-control"> </textarea>
+          <p>{this.props.description}</p>
         </div>
     );
   }
