@@ -25,6 +25,13 @@ export const getItemId = (id) => ({
   id
 });
 
+export const uploadMenu = (data) =>{
+  return {
+    type:'UPLOAD_MENU',
+    data
+  }
+};
+
 
 export const MENUDETAIL_LOADED = 'MENUDETAIL_LOADED';
 export const MENUS_LOADED = 'MENUS_LOADED';
