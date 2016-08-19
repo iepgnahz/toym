@@ -23,11 +23,11 @@ class AddMaterialInput extends Component {
     return (
         <form action="#" className="form-horizontal col-sm-8 col-sm-offset-2">
           <div>
-            <label htmlFor="inputEmail3" className="control-label"><h3>用料 <span id="display-message">必填</span></h3></label>
+            <label htmlFor="inputEmail3" className="control-label"><h3><b>用料</b> <span id="display-message">必填</span></h3></label>
           </div>
           <div className="form-group">
-            <div className="col-sm-10">
-
+            <div className="col-sm-5">
+              用料:
               <input type="text"
                      className="material-input"
                      id="inputSource"
@@ -35,7 +35,9 @@ class AddMaterialInput extends Component {
                      ref="sourceText"
                      onKeyPress={this.handleKeyPress.bind(this)}
               />
-
+              </div>
+              <div className="col-md-6">
+                数量:
               <input type="text"
                      className="material-input"
                      id="inputAmount"
@@ -43,9 +45,10 @@ class AddMaterialInput extends Component {
                      ref="amountText"
                      onKeyPress={this.handleKeyPress.bind(this)}
               />
-              <button onClick={this.click.bind(this)} type="button" className="btn btn-default btn-sm">添加</button>
+              </div>
+              <button id='btn' onClick={this.click.bind(this)} type="button" className="btn  btn-sm btn-primary">添加</button>
 
-            </div>
+
           </div>
 
         </form>
