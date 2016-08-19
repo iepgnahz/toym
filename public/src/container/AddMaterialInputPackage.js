@@ -9,7 +9,7 @@ const mapDispatchToProps = (dispatch)=> ({
   }
 });
 
-const  AddMaterialInputPackage= connect(mapStateToProps, mapDispatchToProps)(AddMaterialInput);
+const AddMaterialInputPackage= connect(mapStateToProps, mapDispatchToProps)(AddMaterialInput);
 
 export default AddMaterialInputPackage;
                                                       
