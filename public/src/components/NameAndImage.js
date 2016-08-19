@@ -17,7 +17,7 @@ class NameAndImage extends Component {
             <small style={{float:'right',marginRight:'2%',marginTop:'3%'}}>上传时间:{this.props.date}</small></h1>
           </div>
           <div>
-            <img src={'../../' + this.props.image} className="text-center img-responsive form-control "
+            <img src={'/'+this.props.image} className="text-center img-responsive form-control "
                  style={{height: 500}}/>
           </div>
           <h3>简介</h3>

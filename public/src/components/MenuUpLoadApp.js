@@ -7,6 +7,7 @@ import Logo from '../components/Logo';
 import {uploadMenu} from '../actions/index';
 import  AddMaterialInputPackage from '../container/AddMaterialInputPackage';
 import  MaterialListPackage from './MaterialList';
+import  MenuImagePackage from '../components/MenuImage';
 class MenuUpLoadApp extends Component{
   constructor(props){
     super(props);
@@ -19,7 +20,9 @@ class MenuUpLoadApp extends Component{
     let materials= this.props.materialUploaded;
     let newDate = new Date();
     let date = `${newDate.getFullYear()}-${newDate.getMonth()+1}-${newDate.getDate()}`;
-    let menuItem = {name:name,description:description,steps:steps,materials:materials,date:date};  //还差数据
+    let image = this.props.loadImage;
+    let menuItem = {name:name,image:image,description:description,steps:steps,materials:materials,date:date};
+
     this.props.uploadMenuItem(menuItem);
 
   }
@@ -29,6 +32,7 @@ class MenuUpLoadApp extends Component{
         <div style={{width:'80%',margin:'10px auto',textAlign:'center'}} className="container">
           <Logo />
           <input type="text"  ref="nameInput"   />
+          <MenuImagePackage />
           <div>
             <h4 className="text-left">简介</h4>
             <textarea className="form-control" rows="2"  style={{overflow: 'auto'}} ref="descriptionInput"

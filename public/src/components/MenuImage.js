@@ -22,7 +22,7 @@ class MenuImage extends Component {
 
       reader.onload = function (e) {
         image.src = e.target.result;
-      }
+      };
 
       reader.readAsDataURL(input.files[0]);
     }
