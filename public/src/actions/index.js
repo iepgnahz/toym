@@ -32,6 +32,13 @@ export const uploadMenu = (data) =>{
   }
 };
 
+export const fetchImage=(file)=>{
+  return {
+    type:'LOAD_IMAGE',
+    data:{file:file}
+  }
+};
+
 
 export const MENUDETAIL_LOADED = 'MENUDETAIL_LOADED';
 export const MENUS_LOADED = 'MENUS_LOADED';
