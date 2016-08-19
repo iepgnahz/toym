@@ -21,7 +21,7 @@ class AddMaterialInput extends Component {
 
   render() {
     return (
-        <form action="#" className="form-horizontal col-sm-8 col-sm-offset-2">
+        <form action="#" className="form-horizontal col-sm-11 col-sm-offset-1 ">
           <div>
             <label htmlFor="inputEmail3" className="control-label"><h3><b>用料</b> <span id="display-message">必填</span></h3></label>
           </div>
