@@ -16,5 +16,11 @@ router.get('/:id', (req, res)=> {
   });
 });
 
+router.post('/',(req,res)=>{
+  new Menus(req.body).save((err,doc)=>{
+    res.send(err);
+  })
+});
+
 module.exports = router;
 // export default router;
