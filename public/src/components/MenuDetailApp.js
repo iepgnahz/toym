@@ -14,11 +14,11 @@ class MenuDetailApp extends Component {
 
   componentDidMount() {
     this.props.loadPage(this.props.params.id);
-    request
-        .get(`/menus/${this.props.params.id}`)
-        .end((err, res)=> {
-          this.props.getMenuDetail(res.body);
-        });
+    // request
+    //     .get(`/menus/${this.props.params.id}`)
+    //     .end((err, res)=> {
+    //       this.props.getMenuDetail(res.body);
+    //     });
   }
 
   render() {

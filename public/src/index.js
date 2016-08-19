@@ -5,14 +5,14 @@ import resultList from './reducers';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import menuRequestMiddleware from './middlewares/menuRequestMiddleware';
+import menuDetailRequestMiddleware from './middlewares/menuDetailRequestMiddleware';
 import MenuDetailPackage  from './components/MenuDetailApp';
 import {Router, Route, browserHistory} from 'react-router';
 import MenuUpLoadApp from './components/MenuUpLoadApp';
 
-
 const store = createStore(
     resultList,
-    applyMiddleware(menuRequestMiddleware)
+    applyMiddleware(menuRequestMiddleware,menuDetailRequestMiddleware)
 );
 
 store.dispatch({

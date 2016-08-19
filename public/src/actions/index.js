@@ -23,7 +23,7 @@ export const deleteMaterial = (id) => ({
 export const getItemId = (id) => ({
   type:'ID_GETTER',
   id
-});    
+});
 
 
 export const MENUDETAIL_LOADED = 'MENUDETAIL_LOADED';
