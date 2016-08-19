@@ -10,7 +10,7 @@ class MaterialList extends Component {
 
 
     return (
-        <div className="col-sm-8 col-sm-offset-2">
+        <div className="col-sm-11 col-sm-offset-1">
           <table className="table table-bordered">
             <thead>
             <tr>
