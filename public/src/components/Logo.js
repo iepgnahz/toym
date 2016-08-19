@@ -6,7 +6,7 @@ class Logo extends Component {
     return (
         <div className="food-body">
           <nav className="navbar navbar-default" role="navigation">
-            <div className="row">
+            <div className="row" id="navbg">
               <div className="navbar-header">
                 <img src="../../image/logo.jpg"></img>
               </div>

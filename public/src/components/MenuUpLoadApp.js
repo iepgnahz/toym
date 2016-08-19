@@ -21,7 +21,7 @@ class MenuUpLoadApp extends Component{
     let newDate = new Date();
     let date = `${newDate.getFullYear()}-${newDate.getMonth()+1}-${newDate.getDate()}`;
     let image = this.props.loadImage;
-    let menuItem = {name:name,image:image,description:description,steps:steps,materials:materials,date:date};
+    let menuItem = {name:name,image:image.file,description:description,steps:steps,materials:materials,date:date};
 
     this.props.uploadMenuItem(menuItem);
 
@@ -29,26 +29,25 @@ class MenuUpLoadApp extends Component{
   render(){
     console.log(this.props);
     return (
-        <div style={{width:'80%',margin:'10px auto',textAlign:'center'}} className="container">
+        <div className="text-center container">
           <Logo />
-          <input type="text"  ref="nameInput"   />
+          <h3><b>菜名: <input type="text"  ref="nameInput" /></b></h3>
           <MenuImagePackage />
-          <div>
-            <h4 className="text-left">简介</h4>
+          <div style={{margin:'30px auto 50px'}}>
+            <h4 className="text-left"><b>简介</b></h4>
             <textarea className="form-control" rows="2"  style={{overflow: 'auto'}} ref="descriptionInput"
-                      placeholder="简介">
+                      placeholder="简单介绍一下你的作品吧.....">
           </textarea>
           </div>
-
           <AddMaterialInputPackage />
           <MaterialListPackage />
           <div>
-            <h4 className="text-left">做法与步骤</h4>
+            <h4 className="text-left"><b>做法与步骤</b></h4>
             <textarea className="form-control" rows="5"  style={{overflow: 'auto'}} ref="stepsInput"
                       placeholder="为了您的菜谱更好的呈现，您可以:1. xxx 回车 2. xxx 回车 3. xxx .....">
           </textarea>
           </div>
-          <button type="button" className="btn btn-info btn-sm" onClick={this. click.bind(this)}>上传菜谱</button>
+          <button type="button" className="btn btn-info btn-lg" onClick={this. click.bind(this)} style={{marginTop:'30px'}}>上传菜谱</button>
         </div>
     );
   }
