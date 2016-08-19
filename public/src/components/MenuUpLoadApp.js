@@ -4,6 +4,7 @@
 import React, {Component} from 'react';// eslint-disable-line no-unused-vars
 import {connect} from 'react-redux';
 import Logo from '../components/Logo';
+import {uploadMenu} from '../actions/index';
 import  AddMaterialInputPackage from '../container/AddMaterialInputPackage';
 import  MaterialListPackage from './MaterialList';
 class MenuUpLoadApp extends Component{
@@ -11,11 +12,23 @@ class MenuUpLoadApp extends Component{
     super(props);
   }
 
-  //
+  click(){
+    let name = this.refs.nameInput.value;
+    let description = this.refs.descriptionInput.value;
+    let steps = this.refs.stepsInput.value;
+    let materials= this.props.materialUploaded;
+    let newDate = new Date();
+    let date = `${newDate.getFullYear()}-${newDate.getMonth()+1}-${newDate.getDate()}`;
+    let menuItem = {name:name,description:description,steps:steps,materials:materials,date:date};  //还差数据
+    this.props.uploadMenuItem(menuItem);
+
+  }
   render(){
+    console.log(this.props);
     return (
         <div style={{width:'80%',margin:'10px auto',textAlign:'center'}} className="container">
           <Logo />
+          <input type="text"  ref="nameInput"   />
           <div>
             <h4 className="text-left">简介</h4>
             <textarea className="form-control" rows="2"  style={{overflow: 'auto'}} ref="descriptionInput"
@@ -38,7 +51,9 @@ class MenuUpLoadApp extends Component{
 }
 const mapStateToProps = (state)=> (state);
 const mapDispatchToProps = (dispatch)=> ({
-
+  uploadMenuItem: (data)=> {
+    dispatch(uploadMenu(data));
+  }
 });
 
 var MenuUpLoadAppPackage = connect(mapStateToProps,mapDispatchToProps)(MenuUpLoadApp);
