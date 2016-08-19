@@ -8,11 +8,12 @@ import menuRequestMiddleware from './middlewares/menuRequestMiddleware';
 import menuDetailRequestMiddleware from './middlewares/menuDetailRequestMiddleware';
 import MenuDetailPackage  from './components/MenuDetailApp';
 import {Router, Route, browserHistory} from 'react-router';
-import MenuUpLoadApp from './components/MenuUpLoadApp';
+import MenuUpLoadAppPackage from './components/MenuUpLoadApp';
+import uploadRequestMiddleware from './middlewares/uploadRequestMiddleware';
 
 const store = createStore(
     resultList,
-    applyMiddleware(menuRequestMiddleware,menuDetailRequestMiddleware)
+    applyMiddleware(menuRequestMiddleware,menuDetailRequestMiddleware,uploadRequestMiddleware)
 );
 
 store.dispatch({
@@ -25,7 +26,7 @@ render(
       <Router history={browserHistory}>
         <Route path="/menu" component={App}/>
         <Route path='/menuDetail/:id' component={MenuDetailPackage}/>
-        <Route path='/menuUpLoad'   component={MenuUpLoadApp}/>
+        <Route path='/menuUpLoad'   component={MenuUpLoadAppPackage}/>
       </Router>
     </Provider>,
     document.getElementById('app')
