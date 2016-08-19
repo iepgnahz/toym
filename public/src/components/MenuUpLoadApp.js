@@ -1,7 +1,7 @@
 /**
  * Created by zhangpei on 16/8/18.
  */
-import React, {Component} from 'react';
+import React, {Component} from 'react';// eslint-disable-line no-unused-vars
 import Logo from '../components/Logo';
 import  AddMaterialInputPackage from '../container/AddMaterialInputPackage';
 import  MaterialListPackage from './MaterialList';
@@ -16,7 +16,7 @@ class MenuUpLoadApp extends Component{
           <AddMaterialInputPackage />
           <MaterialListPackage />
         </div>
-    )
+    );
   }
 }
 

@@ -10,7 +10,6 @@ class NameAndImage extends Component {
 
 
   render() {
-    console.log(this.props);
     return (
         <div>
           <div className="row">
@@ -29,7 +28,7 @@ class NameAndImage extends Component {
 }
 
 var mapStateToProps = (state)=> {
-  return state.menuItem
+  return state.menuItem;
 };
 
 

@@ -4,7 +4,6 @@
 import React, {Component} from 'react'; // eslint-disable-line no-unused-vars
 import Logo from '../components/Logo';
 import MenuDetail from '../components/MenuDetail';
-import request from 'superagent';
 import {connect} from 'react-redux';
 import {loadMenuDetail} from '../actions/index';
 class MenuDetailApp extends Component {
@@ -14,11 +13,6 @@ class MenuDetailApp extends Component {
 
   componentDidMount() {
     this.props.loadPage(this.props.params.id);
-    // request
-    //     .get(`/menus/${this.props.params.id}`)
-    //     .end((err, res)=> {
-    //       this.props.getMenuDetail(res.body);
-    //     });
   }
 
   render() {
@@ -46,7 +40,7 @@ const mapDispatchToProps = (dispatch)=> ({
     dispatch({
       type:'INIT_MENUDETAIL',
       url
-    })
+    });
   }
 });
 var MenuDetailPackage = connect(mapStateToProps, mapDispatchToProps)(MenuDetailApp);

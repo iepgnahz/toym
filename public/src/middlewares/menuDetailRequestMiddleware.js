@@ -15,13 +15,13 @@ var menuDetailRequestMiddleware = store => next => action => {
           next(loadMenuDetail(res.body));
         });
     break;
-    case 'INIT_MENUDETAIL':
-      request
+  case 'INIT_MENUDETAIL':
+    request
           .get(`/menus/${action.url}`)
           .end((err, res)=> {
             store.dispatch(loadMenuDetail(res.body));
           });
-      break;
+    break;
   }
 
   next(action);
