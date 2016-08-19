@@ -1,12 +1,12 @@
 import {combineReducers} from 'redux';
 import menu from './menu';
 import menuItem from './menuItem';
-import uploadMaterials from './uploadMaterials';
+import materialUploaded from './materialUploaded';
 
 const resultList = combineReducers({
   menu,
   menuItem,
-  uploadMaterials
+  materialUploaded
 });
 
 export default resultList;

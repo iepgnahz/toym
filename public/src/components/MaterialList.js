@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {deleteMaterial} from '../actions/index';
 
 class MaterialList extends Component {
-
   render() {
 
     let deleteMaterial = this.props.deleteMaterial;
@@ -50,7 +49,7 @@ class MaterialList extends Component {
 }
 
 const mapStateToProps = (state)=> ({
-  result: state.uploadMaterials
+  result: state.materialUploaded
 });
 
 const mapDispatchToProps = (dispatch)=> ({

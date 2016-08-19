@@ -1,7 +1,7 @@
 /**
  * Created by zhangpei on 16/8/18.
  */
-const uploadMaterials = (state = [], action)=> {
+const materialUploaded = (state = [], action)=> {
 
   switch (action.type) {
     case 'ADD_MATERIAL':
@@ -14,10 +14,10 @@ const uploadMaterials = (state = [], action)=> {
       return state.filter((v,k)=>{
         return k !== action.id;
       });
-    case 'INIT':
-      return state;
+    // case 'INIT':
+    //   return state;
   }
   return state;
 };
 
-export default uploadMaterials;
+export default materialUploaded;
