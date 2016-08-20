@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react';// eslint-disable-line no-unused-vars
 import request from 'superagent';
 import {connect} from 'react-redux';
-import {fetchImage} from '../actions'
+import {fetchImage} from '../actions';
 class MenuImage extends Component {
 
   handleClick(file) {
@@ -11,7 +11,7 @@ class MenuImage extends Component {
         .send(formData)
         .end((err, res)=> {
           this.props.fetchImage(res.body.filePath);
-        })
+        });
   }
 
   isClick() {
@@ -26,7 +26,7 @@ class MenuImage extends Component {
 
       reader.readAsDataURL(input.files[0]);
     }
-   this.handleClick(input.files[0]);
+    this.handleClick(input.files[0]);
   }
   render() {
     return (
@@ -38,14 +38,14 @@ class MenuImage extends Component {
           <br/>
           <input type="file" ref="file" style={{width:'106px'}} onChange={this.isClick.bind(this)}/>
         </div>
-    )
+    );
   }
 }
 
 const mapStateToProps=(state)=>(state);
 const mapDispatchToProps=(dispatch)=>({
   fetchImage: (file)=>{
-    dispatch(fetchImage(file))
+    dispatch(fetchImage(file));
   }
 });
 const MenuImagePackage=connect(mapStateToProps,mapDispatchToProps)(MenuImage);
