@@ -1,46 +1,112 @@
-#app{
-  margin-top:20px;
-  margin-bottom:30px;
+/*logo..start*/
+#header {
+    display: block;
+    width: 80%;
+    height: 150px;
+    margin-bottom: 20px;
+    position: relative
+}
+
+div#logo {
+    height: 28px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    font-size: 25px;
+    font-family: AlexonBoldRegular, sans-serif;
+    background: url(../image/images/2.jpg) no-repeat 0 50%
+}
+
+div#logo a {
+    line-height: 28px;
+    padding-left: 35px;
+    font-weight: bold;
+    color: #1275ba
+}
+
+div.main-menu-block {
+    position: absolute;
+    right: 0;
+    top: 35px;
+}
+
+ul#main-menu {
+    list-style: none;
+}
+
+ul#main-menu li {
+    float: left;
+    position: relative
+}
+
+ul#main-menu li a {
+    display: block;
+    font: 18px HelveticaLTStdBold, sans-serif;
+    min-width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 30px
+}
+
+ul#main-menu li a:hover {
+    color: #1275ba;
+    background: url(../image/images/menu_hover.png) no-repeat;
+}
+
+ul#main-menu li a.active-state {
+    color: #1275ba;
+    background: url(../image/images/menu_hover.png) no-repeat;
+}
+
+
+/*logo end*/
+#app {
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 #name1 {
-  width:130px;
-  height:30px;
-  overflow: hidden;
-  text-align:left;
-  font-size: 22px;
+    width: 130px;
+    height: 30px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 22px;
 }
-.food-body{
-  width:80%;
-  margin: auto;
+
+.food-body {
+    width: 80%;
+    margin: auto;
 }
+
 #food-description {
-  text-align: left;
-  font-size: 16px;
+    text-align: left;
+    font-size: 16px;
 }
 
 #date1 {
-  width:130px;
-  height:30px;
-  overflow: hidden;
-  text-align:right;
-  font-size: 15px;
+    width: 130px;
+    height: 30px;
+    overflow: hidden;
+    text-align: right;
+    font-size: 15px;
 }
-#count{
-  margin-left:35px;
+
+#count {
+    margin-left: 35px;
 
 }
 
 .material-input {
-  height:31px;
+    height: 31px;
 }
 
-#navbg{
-  background-color:#d5d5d5;
-  font-weight:bold;
-  margin: 0;
+#navbg {
+    background-color: #d5d5d5;
+    font-weight: bold;
+    margin: 0;
 }
 
-body{
-  background-color:#ffdddd;
+body {
+    background-color: #f9f2f4;
+
 }
