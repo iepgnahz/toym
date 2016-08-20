@@ -15,7 +15,7 @@ class MenuDetailApp extends Component {
   render() {
 
     return (
-        <div>
+        <div className="container">
           <Logo/>
           <MenuDetail menuItem={this.props.menuItem}/>
         </div>

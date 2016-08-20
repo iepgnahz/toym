@@ -26,18 +26,16 @@ class MenuImage extends Component {
 
       reader.readAsDataURL(input.files[0]);
     }
-    this.handleClick(input.files[0]);
+   this.handleClick(input.files[0]);
   }
   render() {
     return (
-        <div id="wrap" style={{align:'center'}}>
+        <div>
           <div>
-            <img src="" ref="image" id='img1' style={{height:'200px',width:'300px'}}/>
+            <img src="" ref="image" id='img1' style={{height:'400px',width:'600px'}}/>
           </div>
-          <br/>
-          <br/>
-          <input type="file" ref="file" style={{width:'106px'}} onChange={this.isClick.bind(this)}/>
-        </div>
+          <input type="file" ref="file" style={{width:'90px',margin:'10px 0 20px 45%'}} onChange={this.isClick.bind(this)}/>
+            </div>
     );
   }
 }

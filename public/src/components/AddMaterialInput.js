@@ -21,14 +21,15 @@ class AddMaterialInput extends Component {
 
   render() {
     return (
-        <form action="#" className="form-horizontal col-sm-11 col-sm-offset-1 ">
+        <form action="#" className="form-horizontal">
           <div>
-            <label htmlFor="inputEmail3" className="control-label"><h3><b>用料</b> <span id="display-message">必填</span></h3></label>
+             <h4 className="text-left"><b>用料</b>
+               <small className="text-danger">必填</small></h4>
           </div>
           <div className="form-group">
-            <div className="col-sm-5">
-              用料:
-              <input type="text"
+            <div className="text-left col-md-5 col-sm-5">
+              用料<input style={{marginLeft:'10px'}}
+                     type="text"
                      className="material-input"
                      id="inputSource"
                      placeholder="用料名称"
@@ -36,9 +37,9 @@ class AddMaterialInput extends Component {
                      onKeyPress={this.handleKeyPress.bind(this)}
               />
               </div>
-              <div className="col-md-6">
-                数量:
-              <input type="text"
+              <div className="col-md-5 clo-sm-5 text-left">
+               数量<input style={{marginLeft:'10px'}}
+                     type="text"
                      className="material-input"
                      id="inputAmount"
                      placeholder="数量"
@@ -46,7 +47,7 @@ class AddMaterialInput extends Component {
                      onKeyPress={this.handleKeyPress.bind(this)}
               />
               </div>
-              <button id='btn' onClick={this.click.bind(this)} type="button" className="btn  btn-sm btn-primary">添加</button>
+              <button style={{marginRight:'2%',float:'right'}} onClick={this.click.bind(this)} type="button" className="btn btn-md btn-primary">添加</button>
 
 
           </div>

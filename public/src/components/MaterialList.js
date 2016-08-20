@@ -10,7 +10,7 @@ class MaterialList extends Component {
 
 
     return (
-        <div className="col-sm-11 col-sm-offset-1">
+        <div style={{margin:'30px auto 50px auto'}}>
           <table className="table table-bordered">
             <thead>
             <tr>
