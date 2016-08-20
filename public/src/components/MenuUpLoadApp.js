@@ -30,6 +30,7 @@ class MenuUpLoadApp extends Component{
     return (
         <div className="text-center container">
           <Logo />
+          <div className="food-body">
           <h3><b>菜名: <input type="text"  ref="nameInput" /></b></h3>
           <MenuImagePackage />
           <div style={{margin:'30px auto 50px'}}>
@@ -48,6 +49,7 @@ class MenuUpLoadApp extends Component{
           </div>
           <button type="button" className="btn btn-info btn-lg" onClick={this. click.bind(this)} style={{marginTop:'30px'}}>上传菜谱</button>
         </div>
+          </div>
     );
   }
 }

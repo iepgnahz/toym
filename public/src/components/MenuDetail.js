@@ -12,7 +12,7 @@ class MenuDetail extends Component {
 
   render() {
     return (
-        <div>
+        <div className="food-body">
           <NameAndImagePackage />
           <MaterialsPackage />
           <StepsPackage />

@@ -10,7 +10,10 @@
   text-align:left;
   font-size: 22px;
 }
-
+.food-body{
+  width:80%;
+  margin: auto;
+}
 #food-description {
   text-align: left;
   font-size: 16px;
