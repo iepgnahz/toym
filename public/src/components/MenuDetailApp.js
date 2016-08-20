@@ -1,6 +1,3 @@
-/**
- * Created by zhangpei on 16/8/16.
- */
 import React, {Component} from 'react'; // eslint-disable-line no-unused-vars
 import Logo from '../components/Logo';
 import MenuDetail from '../components/MenuDetail';
