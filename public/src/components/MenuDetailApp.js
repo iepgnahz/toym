@@ -1,6 +1,3 @@
-/**
- * Created by zhangpei on 16/8/16.
- */
 import React, {Component} from 'react'; // eslint-disable-line no-unused-vars
 import Logo from '../components/Logo';
 import MenuDetail from '../components/MenuDetail';
@@ -18,7 +15,7 @@ class MenuDetailApp extends Component {
   render() {
 
     return (
-        <div>
+        <div className="container">
           <Logo/>
           <MenuDetail menuItem={this.props.menuItem}/>
         </div>

@@ -1,6 +1,4 @@
-/**
- * Created by zhangpei on 16/8/18.
- */
+
 const materialUploaded = (state = [], action)=> {
 
   switch (action.type) {

@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react';// eslint-disable-line no-unused-vars
 import request from 'superagent';
 import {connect} from 'react-redux';
-import {fetchImage} from '../actions'
+import {fetchImage} from '../actions';
 class MenuImage extends Component {
 
   handleClick(file) {
@@ -11,7 +11,7 @@ class MenuImage extends Component {
         .send(formData)
         .end((err, res)=> {
           this.props.fetchImage(res.body.filePath);
-        })
+        });
   }
 
   isClick() {
@@ -30,22 +30,20 @@ class MenuImage extends Component {
   }
   render() {
     return (
-        <div id="wrap" style={{align:'center'}}>
+        <div>
           <div>
-            <img src="" ref="image" id='img1' style={{height:'200px',width:'300px'}}/>
+            <img src="" ref="image" id='img1' style={{height:'400px',width:'600px'}}/>
           </div>
-          <br/>
-          <br/>
-          <input type="file" ref="file" style={{width:'106px'}} onChange={this.isClick.bind(this)}/>
-        </div>
-    )
+          <input type="file" ref="file" style={{width:'90px',margin:'10px 0 20px 45%'}} onChange={this.isClick.bind(this)}/>
+            </div>
+    );
   }
 }
 
 const mapStateToProps=(state)=>(state);
 const mapDispatchToProps=(dispatch)=>({
   fetchImage: (file)=>{
-    dispatch(fetchImage(file))
+    dispatch(fetchImage(file));
   }
 });
 const MenuImagePackage=connect(mapStateToProps,mapDispatchToProps)(MenuImage);

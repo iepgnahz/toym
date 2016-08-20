@@ -2,15 +2,6 @@
   margin-top:20px;
   margin-bottom:30px;
 }
-.logo {
-  width: 80%;
-  margin: auto;
-}
-
-.food-body {
-  width: 80%;
-  margin: auto;
-}
 
 #name1 {
   width:130px;
@@ -19,7 +10,10 @@
   text-align:left;
   font-size: 22px;
 }
-
+.food-body{
+  width:80%;
+  margin: auto;
+}
 #food-description {
   text-align: left;
   font-size: 16px;
@@ -37,15 +31,16 @@
 
 }
 
-#btn{
-  margin-right: 0px;
-}
-
 .material-input {
   height:31px;
 }
 
-#display-message{
-  font-size:12px;
-  color:crimson;
+#navbg{
+  background-color:#d5d5d5;
+  font-weight:bold;
+  margin: 0;
+}
+
+body{
+  background-color:#ffdddd;
 }
