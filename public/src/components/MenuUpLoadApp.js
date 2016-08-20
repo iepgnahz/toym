@@ -15,6 +15,7 @@ class MenuUpLoadApp extends Component{
   }
 
   componentWillUpdate(nextProps) {
+
     if(nextProps.resultJump) {
       this.props.router.push('/menu');
     };
@@ -62,7 +63,7 @@ class MenuUpLoadApp extends Component{
 const mapStateToProps = (state)=> (state);
 const mapDispatchToProps = (dispatch)=> ({
   uploadMenuItem: (data)=> {
-    dispatch(uploadMenu(data));
+      dispatch(uploadMenu(data));
   }
 });
 

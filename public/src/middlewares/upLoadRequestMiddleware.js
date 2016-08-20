@@ -1,8 +1,7 @@
 import request from 'superagent';
-import uploadMenu from '../actions/index';
-const uploadRequestMiddleware = () => next => action => {
+const uploadRequestMiddleware = store => next => action => {
   switch (action.type) {
-  case uploadMenu:
+    case 'UPLOAD_MENU':
     request
           .post('/menus')
           .send(action.data)
