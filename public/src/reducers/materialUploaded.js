@@ -3,7 +3,6 @@ const materialUploaded = (state = [], action)=> {
 
   switch (action.type) {
   case 'ADD_MATERIAL':
-    console.log(action.data)
     return [
       ...state,
       action.data

@@ -10,7 +10,6 @@ class AddMaterialInput extends Component {
     }
     this.refs.sourceText.value = '';
     this.refs.amountText.value = '';
-    console.log(this.props)
   }
 
   handleKeyPress(e) {
