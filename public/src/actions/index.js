@@ -29,14 +29,14 @@ export const uploadMenu = (data) =>{
   return {
     type:'UPLOAD_MENU',
     data
-  }
+  };
 };
 
 export const fetchImage=(file)=>{
   return {
     type:'LOAD_IMAGE',
     data:{file:file}
-  }
+  };
 };
 
 
