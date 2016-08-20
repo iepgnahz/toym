@@ -21,13 +21,12 @@ class MenuUpLoadApp extends Component{
     let newDate = new Date();
     let date = `${newDate.getFullYear()}-${newDate.getMonth()+1}-${newDate.getDate()}`;
     let image = this.props.loadImage;
-    let menuItem = {name:name,image:image,description:description,steps:steps,materials:materials,date:date};
+    let menuItem = {name:name,image:image.file,description:description,steps:steps,materials:materials,date:date};
 
     this.props.uploadMenuItem(menuItem);
 
   }
   render(){
-    console.log(this.props);
     return (
         <div style={{width:'80%',margin:'10px auto',textAlign:'center'}} className="container">
           <Logo />
