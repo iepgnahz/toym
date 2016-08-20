@@ -94,20 +94,7 @@ describe('get /menus', ()=> {
         })
 
   });
-  it("should return array length", (done)=> {
-    request(app)
-        .get('/menus')
-        .end((err, res)=> {
-          if (err) {
-            done.fail(err);
-          } else {
-            let result = res.body.length;
-            let expectResult = 9;
-            expect(result).toEqual(expectResult);
-            done();
-          }
-        })
-  })
+
 
 });
 

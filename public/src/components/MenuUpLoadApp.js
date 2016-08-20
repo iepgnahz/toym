@@ -15,6 +15,7 @@ class MenuUpLoadApp extends Component{
   }
 
   componentWillUpdate(nextProps) {
+
     if(nextProps.resultJump) {
       this.props.router.push('/menu');
     }
@@ -28,7 +29,8 @@ class MenuUpLoadApp extends Component{
     let newDate = new Date();
     let date = `${newDate.getFullYear()}-${newDate.getMonth()+1}-${newDate.getDate()}`;
     let image = this.props.loadImage;
-    let menuItem = {name:name,image:image,description:description,steps:steps,materials:materials,date:date};
+    let menuItem = {name:name,image:image.file,description:description,steps:steps,materials:materials,date:date};
+
     this.props.uploadMenuItem(menuItem);
 
   }

@@ -1,14 +1,13 @@
 import request from 'superagent';
-import uploadMenu from '../actions/index';
-const uploadRequestMiddleware = (store) => next => action => {
+const uploadRequestMiddleware = store => next => action => {
   switch (action.type) {
-  case uploadMenu:
+  case 'UPLOAD_MENU':
     request
           .post('/menus')
           .send(action.data)
-          .type('form')
+          .type('json')
           .end((err,res)=>{
-            if(res.body){
+            if(res.text.trim() === 'fail'){
               alert('上传失败');
             } else {
               store.dispatch({
