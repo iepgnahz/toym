@@ -26,7 +26,7 @@ class MenuImage extends Component {
 
       reader.readAsDataURL(input.files[0]);
     }
-   this.handleClick(input.files[0]);
+    this.handleClick(input.files[0]);
   }
   render() {
     return (

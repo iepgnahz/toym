@@ -17,7 +17,7 @@ router.get('/:id', (req, res)=> {
 });
 
 router.post('/',(req,res)=>{
-  new Menus(req.body).save((err,doc)=>{
+  new Menus(req.body).save((err,doc)=>{// eslint-disable-line no-unused-vars
     res.send(err);
   });
 });

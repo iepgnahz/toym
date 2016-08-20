@@ -17,7 +17,7 @@ class MenuUpLoadApp extends Component{
   componentWillUpdate(nextProps) {
     if(nextProps.resultJump) {
       this.props.router.push('/menu');
-    };
+    }
   }
 
   click(){

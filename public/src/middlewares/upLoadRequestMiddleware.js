@@ -1,6 +1,6 @@
 import request from 'superagent';
 import uploadMenu from '../actions/index';
-const uploadRequestMiddleware = () => next => action => {
+const uploadRequestMiddleware = (store) => next => action => {
   switch (action.type) {
   case uploadMenu:
     request
@@ -14,7 +14,7 @@ const uploadRequestMiddleware = () => next => action => {
               store.dispatch({
                 type:'JUMP_RESULT',
                 data:true
-              })
+              });
             }
           });
   }

@@ -14,10 +14,10 @@ class MaterialList extends Component {
           <table className="table table-bordered">
             <thead>
             <tr>
-              <th>编号</th>
-              <th>用料名称</th>
-              <th>数量</th>
-              <th>Delete</th>
+              <th className="text-center">编号</th>
+              <th className="text-center">用料名称</th>
+              <th className="text-center">数量</th>
+              <th className="text-center">Delete</th>
             </tr>
             </thead>
             <tbody>
@@ -34,7 +34,7 @@ class MaterialList extends Component {
                             deleteMaterial(k);
                           }}
                       >
-                        删除
+                       <b> 删除</b>
                       </a></td>
                     </tr>
                 );
