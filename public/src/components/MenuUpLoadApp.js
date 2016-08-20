@@ -18,7 +18,7 @@ class MenuUpLoadApp extends Component{
 
     if(nextProps.resultJump) {
       this.props.router.push('/menu');
-    };
+    }
   }
 
   click(){
@@ -30,6 +30,7 @@ class MenuUpLoadApp extends Component{
     let date = `${newDate.getFullYear()}-${newDate.getMonth()+1}-${newDate.getDate()}`;
     let image = this.props.loadImage;
     let menuItem = {name:name,image:image,description:description,steps:steps,materials:materials,date:date};
+
     this.props.uploadMenuItem(menuItem);
 
   }
@@ -63,7 +64,7 @@ class MenuUpLoadApp extends Component{
 const mapStateToProps = (state)=> (state);
 const mapDispatchToProps = (dispatch)=> ({
   uploadMenuItem: (data)=> {
-      dispatch(uploadMenu(data));
+    dispatch(uploadMenu(data));
   }
 });
 

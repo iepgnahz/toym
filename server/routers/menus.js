@@ -17,8 +17,12 @@ router.get('/:id', (req, res)=> {
 });
 
 router.post('/',(req,res)=>{
-  new Menus(req.body).save((err,doc)=>{
-    res.send(err)
+  let materials = req.body.materials.source.map((item,k)=>{
+    return {source:item,amount:req.body.materials.amount[k]}
+  });
+  let menus = Object.assign({},req.body,{materials:materials});
+  new Menus(menus).save((err,doc)=>{
+    res.send(err);
   });
 });
 

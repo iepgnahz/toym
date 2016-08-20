@@ -10,6 +10,7 @@ class AddMaterialInput extends Component {
     }
     this.refs.sourceText.value = '';
     this.refs.amountText.value = '';
+    console.log(this.props)
   }
 
   handleKeyPress(e) {
@@ -28,7 +29,7 @@ class AddMaterialInput extends Component {
           </div>
           <div className="form-group">
             <div className="text-left col-md-5 col-sm-5">
-              用料<input style={{marginLeft:'10px'}}
+              <b>用料</b><input style={{marginLeft:'10px'}}
                      type="text"
                      className="material-input"
                      id="inputSource"
@@ -38,7 +39,7 @@ class AddMaterialInput extends Component {
               />
               </div>
               <div className="col-md-5 clo-sm-5 text-left">
-               数量<input style={{marginLeft:'10px'}}
+               <b>数量</b><input style={{marginLeft:'10px'}}
                      type="text"
                      className="material-input"
                      id="inputAmount"

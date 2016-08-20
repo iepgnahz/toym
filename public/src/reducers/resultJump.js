@@ -3,8 +3,8 @@
  */
 var resultJump = function (state=false,action) {
   switch (action.type){
-    case 'JUMP_RESULT':
-      return action.data
+  case 'JUMP_RESULT':
+    return action.data;
   }
   return false;
 };

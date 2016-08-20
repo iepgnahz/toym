@@ -1,7 +1,8 @@
 import request from 'superagent';
 const uploadRequestMiddleware = store => next => action => {
   switch (action.type) {
-    case 'UPLOAD_MENU':
+  case 'UPLOAD_MENU':
+    console.log(action.data)
     request
           .post('/menus')
           .send(action.data)
@@ -13,7 +14,7 @@ const uploadRequestMiddleware = store => next => action => {
               store.dispatch({
                 type:'JUMP_RESULT',
                 data:true
-              })
+              });
             }
           });
   }
