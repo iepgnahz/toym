@@ -163,3 +163,14 @@ describe('get /menus', ()=> {
 
   })
 });
+
+describe('post /menus',()=>{
+  it("should return err message",()=>{
+    request(app)
+        .post('/menus')
+        .end((err,res)=>{
+          expect(err).toEqual(null);
+        });
+
+  })
+});
