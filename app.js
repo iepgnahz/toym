@@ -20,12 +20,12 @@ const app = express();
 
 mongoose.connect('mongodb://localhost/todos');
 
-app.post('/profile', upload.single('avatar'), (req, res, next)=> {
+app.post('/profile', upload.single('avatar'), (req, res)=> {
   res.send({
     err: null,
     filePath: 'uploads/' + path.basename(req.file.path)
-  })
-  console.log(req.file.path);
+  });
+  
 });
 
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
