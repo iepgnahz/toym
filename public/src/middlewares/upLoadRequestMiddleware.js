@@ -14,13 +14,16 @@ const uploadRequestMiddleware = store => next => action => {
             if(res.body){
               alert('上传失败')
             } else {
-              alert('上传成功');
+              store.dispatch({
+                type:'JUMP_RESULT',
+                data:true
+              })
             }
           })
   }
   next(action);
 };
 
-///没写完
+
 
 export default uploadRequestMiddleware;

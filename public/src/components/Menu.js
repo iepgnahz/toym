@@ -6,7 +6,7 @@ import MenuItem from './MenuItem';
 
 class Menu extends Component {
   render() {
-    let menu = this.props.menu;
+    let menu = this.props.menu || [];
 
     //let {people}=this.props;
 

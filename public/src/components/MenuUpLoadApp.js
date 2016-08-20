@@ -8,9 +8,16 @@ import {uploadMenu} from '../actions/index';
 import  AddMaterialInputPackage from '../container/AddMaterialInputPackage';
 import  MaterialListPackage from './MaterialList';
 import  MenuImagePackage from '../components/MenuImage';
+import {withRouter} from 'react-router';
 class MenuUpLoadApp extends Component{
   constructor(props){
     super(props);
+  }
+
+  componentWillUpdate(nextProps) {
+    if(nextProps.resultJump) {
+      this.props.router.push('/menu');
+    };
   }
 
   click(){
@@ -22,10 +29,12 @@ class MenuUpLoadApp extends Component{
     let date = `${newDate.getFullYear()}-${newDate.getMonth()+1}-${newDate.getDate()}`;
     let image = this.props.loadImage;
     let menuItem = {name:name,image:image,description:description,steps:steps,materials:materials,date:date};
-
     this.props.uploadMenuItem(menuItem);
-
   }
+
+
+
+
   render(){
     console.log(this.props);
     return (
@@ -60,7 +69,7 @@ const mapDispatchToProps = (dispatch)=> ({
   }
 });
 
-var MenuUpLoadAppPackage = connect(mapStateToProps,mapDispatchToProps)(MenuUpLoadApp);
+var MenuUpLoadAppPackage = connect(mapStateToProps,mapDispatchToProps)(withRouter(MenuUpLoadApp));
 
 
 export default MenuUpLoadAppPackage;
