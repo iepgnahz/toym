@@ -23,7 +23,7 @@ class SliderPicture extends Component {
   }
 
   render() {
-    let address = ['./../images/a.jpg', './../images/c.jpg', './../images/d.jpg','./../images/e.jpg','./../images/h.jpg'];
+    let address = ['./../image/a.jpg', './../image/c.jpg', './../image/d.jpg','./../image/e.jpg','./../image/h.jpg'];
     return (
         <div className="food-body">
           <div id="btn_1" >
