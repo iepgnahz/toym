@@ -4,13 +4,14 @@ import menuItem from './menuItem';
 import materialUploaded from './materialUploaded';
 import loadImage from './uploadImage';
 import resultJump from './resultJump';
-
+import homePage from './homePage';
 const resultList = combineReducers({
   menu,
   menuItem,
   materialUploaded,
   loadImage,
-  resultJump
+  resultJump,
+  homePage
 });
 
 export default resultList;
