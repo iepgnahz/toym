@@ -1,3 +1,24 @@
-/**
- * Created by yujuan on 16-8-22.
- */
+import  React ,{Component} from 'react';
+import {Link} from 'react-router';
+class HomePageItem extends Component{
+  render(){
+   let {id,name,date,description,image}=this.props;
+    return (
+        <div className="food-body">
+          <div className="text-center col-sm-6 col-md-4">
+            <div className="thumbnail">
+              <Link to={'/menuDetail/' + id} className="text-center " >
+                <img src={image} alt="..." style={{height: '180px'}}/>
+              </Link>
+              <div className="caption row">
+                <div className="col-md-6" id="name1">{name}</div>
+                <div className="col-md-6" id="date1">{date}</div>
+              </div>
+              <p id="food-description">{description}</p>
+            </div>
+          </div>
+        </div>
+    )
+  }
+}
+export default HomePageItem;
