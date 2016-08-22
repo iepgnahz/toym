@@ -37,7 +37,6 @@ class MenuUpLoadApp extends Component{
   render(){
     return (
         <div className="text-center container">
-          <Logo />
           <div className="food-body">
           <h3><b>菜名: <input type="text"  ref="nameInput" /></b></h3>
           <MenuImagePackage />
