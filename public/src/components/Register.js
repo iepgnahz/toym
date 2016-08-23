@@ -3,6 +3,7 @@
  */
 import React, {Component} from 'react'; // eslint-disable-line no-unused-vars
 import {sendMessage}  from '../actions/index';
+import {resetRegister} from '../actions/index';
 import {withRouter} from 'react-router';
 import {connect}  from 'react-redux';
 import {showRegisterErr} from '../actions/index';
@@ -60,14 +61,11 @@ class Login extends React.Component {
     this.refs.tel.value = '';
     this.setState({errTelMessage:''});
   }
-
-
-
-
   componentWillUpdate(nextProps) {
 
     if(nextProps.registerToLogin) {
-      this.props.router.push('/login');
+      this.props.router.push('/in/login');
+      this.props.resetRegister();
     }
   }
 
@@ -118,6 +116,9 @@ const mapDispatchToProps = (dispatch)=> ({
   },
   showRegisterErr: (err)=> {
     dispatch(showRegisterErr(err));
+  },
+  resetRegister:()=>{
+    dispatch(resetRegister());
   }
 });
 var LoginPackage = connect(mapStateToProps, mapDispatchToProps)(withRouter(Login));
