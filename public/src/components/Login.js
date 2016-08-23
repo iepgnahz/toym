@@ -6,6 +6,7 @@ import {sendMessage}  from '../actions/index';
 import {withRouter,Link} from 'react-router';
 import {connect}  from 'react-redux';
 import {loginErrShowed} from '../actions/index';
+import {resetLoginState} from '../actions/index';
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +25,7 @@ class Login extends React.Component {
 
     if(nextProps.loginJumped) {
       if(nextProps.loginJumped.isJumped) {
+        this.props.resetLogin();  //我一旦点击登录,页面重新渲染必然执行componentWillUpdate,所以会导致当你已经登录成功的时候,已经把isJUMPed设置为了true,会一直保持true的状态,所以又跳转到用户中心
         this.props.router.push(`/userCenter/${nextProps.loginJumped.username}`);
       }
     }
@@ -70,6 +72,10 @@ const mapDispatchToProps = (dispatch)=> ({
 
   loginUserErrShowed: (err)=>{
     dispatch(loginErrShowed(err))
+  },
+
+  resetLogin: ()=>{
+    dispatch(resetLoginState());
   }
 });
 var LoginPackage = connect(mapStateToProps, mapDispatchToProps)(withRouter(Login));
