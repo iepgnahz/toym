@@ -126,9 +126,10 @@ export const getUserCenterMessage = ()=>{
     request
         .get('/menus/confirmUserCenter')
         .end((err,res)=>{
-          if(res.status === 200){
+          if(res.ok && !err){
             dispatch(receiveUserCenterMessage(true,res.text));
           } else {
+            console.log('aaaaaaaa')
             dispatch({
               type:'USERCENTERPAGE_REDIRECTED',
               isJumped:true
@@ -153,12 +154,19 @@ export const resetLoginState = ()=>{
   }
 };
 
+
+export const resetUserCenter = ()=>{
+  return {
+    type:'RESET_USERCENTERINTRO_STATE'
+  }
+};
+
 export const getUserMessage = (userId)=>{
   return {
     type:'USERMESSAGE_GETTED',
     userId
   }
-}
+};
 
 export const getUserWorks = (userId)=>{
   return {
@@ -167,12 +175,14 @@ export const getUserWorks = (userId)=>{
   }
 };
 
-// export default showLoginErr = (err)=>{
-//   return {
-//     type:'LOGINERR_SHOWED',
-//     err
-//   }
-// }
+export const  resetRegister = ()=>{
+  return {
+    type:'RESET_REGISTER',
+    isPromised:false
+  }
+};
+
+
 
 };
 
