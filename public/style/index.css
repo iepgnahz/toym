@@ -100,16 +100,6 @@ ul#main-menu li a.active-state {
     height: 31px;
 }
 
-#navbg {
-    background-color: #d5d5d5;
-    font-weight: bold;
-    margin: 0;
-}
-
-.logo{
-  width:80%;
-  margin:auto;
-}
 .food-body{
   width:80%;
   margin:auto;
@@ -137,21 +127,49 @@ ul#main-menu li a.active-state {
   height:400px;
   margin:auto;
 }
+
 #btn_1{
-  position: absolute;
-  background-color: #FFF8DC;
-  border: none;
+  font-size: 40px;
+  position:absolute;
   opacity: 0.5;
   z-index: 3;
-  left:17%;
-  top:41%;
+  top: 45%;
 }
 #btn_2{
-  position: absolute;
-  background-color: #FFF8DC;
-  border: none;
-  opacity: 0.5;
-  z-index: 3;
-  left: 80%;
-  top:41%;
+    font-size:40px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: 3;
+    top: 45%;
+    right:18%;
 }
+
+#showword h3:hover{
+    color:#00b3ee;
+}
+
+#showword h3{
+    font-weight: 700;
+}
+
+#showword{
+    margin: 30px auto;
+}
+
+
+
+#logos ul li{
+ font-size: 18px;
+ font-weight: 700;
+}
+
+#test{animation:change 5s linear 0s infinite;font-size:30px;font-weight:700;}
+@keyframes change{0%{color:#000000;}25%{color:#00b3ee;}50%{color:#b10dc9;}75%{color:#01ff70;}100% {color:#ff851b;}}
+
+
+
+body{
+    background:url("../image/bg.jpg");
+    background-size: 100%;
+}
+

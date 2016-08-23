@@ -4,9 +4,9 @@ class HomePageItem extends Component{
   render(){
    let {id,name,date,description,image}=this.props;
     return (
-        <div className="food-body">
+        <div>
           <div className="text-center col-sm-6 col-md-4">
-            <div className="thumbnail">
+            <div  className="thumbnail">
               <Link to={'/menuDetail/' + id} className="text-center " >
                 <img src={image} alt="..." style={{height: '180px'}}/>
               </Link>

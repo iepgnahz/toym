@@ -9,6 +9,8 @@ import  AddMaterialInputPackage from '../container/AddMaterialInputPackage';
 import  MaterialListPackage from './MaterialList';
 import  MenuImagePackage from '../components/MenuImage';
 import {withRouter} from 'react-router';
+import Footer from './Footer';
+
 class MenuUpLoadApp extends Component{
   constructor(props){
     super(props);
@@ -37,6 +39,7 @@ class MenuUpLoadApp extends Component{
   render(){
     return (
         <div className="text-center container">
+          <Logo/>
           <div className="food-body">
           <h3><b>菜名: <input type="text"  ref="nameInput" /></b></h3>
           <MenuImagePackage />
@@ -56,6 +59,7 @@ class MenuUpLoadApp extends Component{
           </div>
           <button type="button" className="btn btn-info btn-lg" onClick={this. click.bind(this)} style={{marginTop:'30px'}}>上传菜谱</button>
         </div>
+          <Footer/>
           </div>
     );
   }

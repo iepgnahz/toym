@@ -3,6 +3,8 @@ import Logo from '../components/Logo';
 import MenuDetail from '../components/MenuDetail';
 import {connect} from 'react-redux';
 import {loadMenuDetail} from '../actions/index';
+import Footer from './Footer';
+
 class MenuDetailApp extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +18,9 @@ class MenuDetailApp extends Component {
 
     return (
         <div className="container">
+          <Logo/>
           <MenuDetail menuItem={this.props.menuItem}/>
+          <Footer/>
         </div>
     );
   }

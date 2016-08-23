@@ -25,14 +25,10 @@ class SliderPicture extends Component {
   render() {
     let address = ['./../image/a.jpg', './../image/c.jpg', './../image/d.jpg','./../image/e.jpg','./../image/h.jpg'];
     return (
-        <div className="food-body">
-          <div id="btn_1" >
-            <button className="glyphicon glyphicon-menu-left" onClick={this.prev.bind(this) }>.</button>
-          </div>
-          <div id="btn_2">
-            <button  className="glyphicon glyphicon-menu-right" onClick={this.next.bind(this) }>.</button>
-          </div>
-          <img id="picture-sliding" src={address[this.state.imageIndex]}/>
+        <div id="slider">
+            <button className="glyphicon glyphicon-menu-left" onClick={this.prev.bind(this) } id="btn_1"></button>
+            <img id="picture-sliding" src={address[this.state.imageIndex]}/>
+            <button  className="glyphicon glyphicon-menu-right" onClick={this.next.bind(this) } id="btn_2"></button>
         </div>
 
     );
