@@ -1,3 +1,5 @@
+import request from 'superagent';
+
 export const menusLoader = (menuItems)=> ({
   type: MENUS_LOADED,
   menuItems
@@ -49,6 +51,128 @@ export const initHomePage=()=> {
     type: 'INIT_HOMEPAGE'
   };
 
+export const sendMessage = (data)=>{
+  return {
+    type:'MESSAGE_SENDED',
+    data
+  }
+};
+
+export const sendRegisterMessage = (data)=>{
+  return {
+    type:'REGISTERMESSAGE_SENDED',
+    data
+  }
+};
+
+export const requestUserMessage = ()=>{
+  return {
+    type:"REQUEST_USERMESSAGE"
+  }
+};
+
+export const requestUserCenterMessage = ()=>{
+  return {
+    type:"REQUEST_USERCENTERMESSAGE"
+  }
+};
+
+export const receiveUserMessage = (isCompleted,username)=>{
+  return {
+    type:"RECEIVE_USERMESSAGE",
+    isCompleted,
+    username
+  }
+};
+
+export const receiveUserCenterMessage = (isCompleted,username)=>{
+  return {
+    type:"RECEIVE_USERCENTERMESSAGE",
+    isCompleted,
+    username
+  }
+};
+
+export const showRegisterErr = (err)=>{
+   return {
+     type: 'REGISTERERR_SHOWED',
+     err
+   }
+};
+
+
+export const confirmUserMessage = ()=>{
+  return (dispatch)=>{
+    dispatch(requestUserMessage());
+
+    request
+        .get('/menus/confirmUpload')
+        .end((err,res)=>{
+          if(res.status === 200){
+            dispatch(receiveUserMessage(true,res.text));
+          } else {
+            dispatch({
+              type:'PAGE_REDIRECTED',
+              isJumped:true
+            })
+          }
+        })
+  }
+};
+
+export const getUserCenterMessage = ()=>{
+  return (dispatch)=>{
+    dispatch(requestUserCenterMessage());
+    request
+        .get('/menus/confirmUserCenter')
+        .end((err,res)=>{
+          if(res.status === 200){
+            dispatch(receiveUserCenterMessage(true,res.text));
+          } else {
+            dispatch({
+              type:'USERCENTERPAGE_REDIRECTED',
+              isJumped:true
+            })
+          }
+        })
+  }
+};
+
+
+export const loginErrShowed = (err)=>{
+  return {
+    type:'LOGINUSERERR_SHOWED',
+    err
+  }
+}
+
+export const resetLoginState = ()=>{
+  return {
+    type:'RESET_STATE',
+    data:{}
+  }
+};
+
+export const getUserMessage = (userId)=>{
+  return {
+    type:'USERMESSAGE_GETTED',
+    userId
+  }
+}
+
+export const getUserWorks = (userId)=>{
+  return {
+    type:'USERWORKS_GETTED',
+    userId
+  }
+};
+
+// export default showLoginErr = (err)=>{
+//   return {
+//     type:'LOGINERR_SHOWED',
+//     err
+//   }
+// }
 
 };
 
