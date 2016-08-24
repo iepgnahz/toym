@@ -12,6 +12,10 @@ const userCenterMessageLoaded = function (state={},action) {
         isCompleted:action.isCompleted,
         username:action.username
       }
+    case 'REAET_USERINTRO':
+      return {
+        isCompleted:action.isCompleted
+      }
   }
   return state
 };
