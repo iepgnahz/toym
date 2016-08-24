@@ -1,6 +1,26 @@
 export default {
+  Sessions:[
+    {
+      username:'xxx',
+      password:'123456'
+    }
+  ],
+  Users:[{
+    _id:'57b80af6cf7505e87e5e2ee1',  //一个写死的Id
+    username: 'zhangpei',
+    password: 'zhangpei123',
+    tel:'17791378995'
+  },
+    {
+      _id:'57b80af6cf7505e87e5e2ee2',  //一个写死的Id
+      username: 'guoxin',
+      password: 'guoxin123',
+      tel:'17791378996'
+    }
+  ],
   Menus: [{
     _id: '57b1c147201d920964e2bc01',
+    user:'zhangpei',
     name: '茴香卤面',
     image: 'image/01.jpg',
     date: '2016-8-14',
@@ -36,6 +56,7 @@ export default {
 
   }, {
     _id: '57b1c147201d920964e2bc02',
+    user:'zhangpei',
     name: '鱼香肉丝',
     image: 'image/02.jpg',
     date: '2016-8-15',
@@ -75,6 +96,7 @@ export default {
 
   }, {
     name: '乌东面',
+    user:'guoxin',
     image: 'image/04.jpg',
     date: '2016-8-17',
     description: '香港名厨吴百驹师傅名菜，无敌好吃，非常赞',
@@ -113,7 +135,9 @@ export default {
 
   }, {
     name: '干锅菜花',
+    user:'guoxin',
     image: 'image/05.jpg',
+
     date: '2016-8-18',
     description: '香港名厨吴百驹师傅名菜，无敌好吃，非常赞',
     materials: [
@@ -151,6 +175,7 @@ export default {
 
   }, {
     name: '冰棍冰棍',
+    user:'zhangpei',
     image: 'image/06.jpg',
     date: '2016-8-19',
     description: '香港名厨吴百驹师傅名菜，无敌好吃，非常赞',
@@ -190,6 +215,7 @@ export default {
   }, {
     name: '清蒸鲜鱼',
     image: 'image/07.jpg',
+    user:'zhangpei',
     date: '2016-8-20',
     description: '没想到我的麻薯包这么受欢迎，又一大波麻薯包来袭啦。',
     materials: [
@@ -227,6 +253,7 @@ export default {
 
   }, {
     name: '红烧鸡腿',
+    user:'guoxin',
     image: 'image/08.jpg',
     date: '2016-8-21',
     description: '没想到我的麻薯包这么受欢迎，又一大波麻薯包来袭啦。',
@@ -265,6 +292,7 @@ export default {
 
   }, {
     name: '糖醋里脊',
+    user:'guoxin',
     image: 'image/03.jpg',
     date: '2016-8-22',
     description: '没想到我的麻薯包这么受欢迎，又一大波麻薯包来袭啦。',
@@ -303,6 +331,7 @@ export default {
 
   }, {
     name: '干锅菜花',
+    user:'zhangpei',
     image: 'image/05.jpg',
     date: '2016-8-18',
     description: '香港名厨吴百驹师傅名菜，无敌好吃，非常赞',
