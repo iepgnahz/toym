@@ -25,9 +25,9 @@ class Login extends React.Component {
 
     if(nextProps.loginJumped) {
       if(nextProps.loginJumped.isJumped) {
-          //我一旦点击登录,页面重新渲染必然执行componentWillUpdate,所以会导致当你已经登录成功的时候,已经把isJUMPed设置为了true,会一直保持true的状态,所以又跳转到用户中心
-        this.props.router.push(`/userCenter`);
-        this.props.resetLogin();
+
+        this.props.resetLogin();  //我一旦点击登录,页面重新渲染必然执行componentWillUpdate,所以会导致当你已经登录成功的时候,已经把isJUMPed设置为了true,会一直保持true的状态,所以又跳转到用户中心
+        this.props.router.push(`/userCenter/${nextProps.loginJumped.username}`);
       }
     }
   }
