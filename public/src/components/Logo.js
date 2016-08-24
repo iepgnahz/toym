@@ -16,7 +16,6 @@ class Logo extends Component {
                   <li><Link to="/">首页</Link></li>
                   <li><Link to="/menu">菜品动态</Link></li>
                   <li><Link to="/menuUpLoad">上传菜谱</Link></li>
-                  <li><Link to="/userCenter">个人中心</Link></li>
                 </ul>
               </div>
               <div style={{float: 'right', marginRight: '5%'}}>
