@@ -9,17 +9,26 @@ import  AddMaterialInputPackage from '../container/AddMaterialInputPackage';
 import  MaterialListPackage from './MaterialList';
 import  MenuImagePackage from '../components/MenuImage';
 import {withRouter} from 'react-router';
-import Footer from './Footer';
-
+import {confirmUserMessage} from '../actions/index'
 class MenuUpLoadApp extends Component{
   constructor(props){
     super(props);
+
+  }
+
+  componentDidMount() {
+    this.props.confirmUserMessage();
+
   }
 
   componentWillUpdate(nextProps) {
 
     if(nextProps.resultJump) {
       this.props.router.push('/menu');
+    }
+
+    if(nextProps.redirectPage){
+      this.props.router.push('/in/login');
     }
   }
 
@@ -37,9 +46,9 @@ class MenuUpLoadApp extends Component{
 
   }
   render(){
-    return (
+    return this.props.userMessageLoaded.isCompleted? (
         <div className="text-center container">
-          <Logo/>
+          {/*<Logo />*/}
           <div className="food-body">
           <h3><b>菜名: <input type="text"  ref="nameInput" /></b></h3>
           <MenuImagePackage />
@@ -59,15 +68,23 @@ class MenuUpLoadApp extends Component{
           </div>
           <button type="button" className="btn btn-info btn-lg" onClick={this. click.bind(this)} style={{marginTop:'30px'}}>上传菜谱</button>
         </div>
-          <Footer/>
           </div>
-    );
+    ):(
+        <tr >
+          <td className="text-xs-center" colSpan="3">
+            <i className="m-t-1 fa fa-circle-o-notch fa-spin fa-5x fa-fw" />
+          </td>
+        </tr>
+    )  ;
   }
 }
 const mapStateToProps = (state)=> (state);
 const mapDispatchToProps = (dispatch)=> ({
   uploadMenuItem: (data)=> {
     dispatch(uploadMenu(data));
+  },
+  confirmUserMessage: ()=>{
+    dispatch(confirmUserMessage())
   }
 });
 
