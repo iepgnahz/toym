@@ -71,34 +71,33 @@ class Login extends React.Component {
 
   render() {
     return (
-        <div className=" row col-xs-offset-4 col-xs-4 text-center">
-          <div className="page-header">
+        <div >
+          <div >
             <h1 className='text-center'> 烹然心动 </h1>
           </div>
           <form>
             <div className="form-group">
-              <label htmlFor="exampleInputEmail1">用户名 : </label>
-              <input type="text" className="form-control" id="exampleInputEmail1" placeholder="用户名" ref="username"
+              <input type="text" className="form-control" id="exampleInputEmail" placeholder="用户名" ref="username"
                      default=""  onFocus={this.focusUserName.bind(this)}/>
               <p className=" text-danger" >{this.state.errUserMessage}</p>
               <p className=" text-danger" >{this.props.registerErrShowed}</p>
             </div>
             <div className="form-group">
-              <input type="password" className="form-control" id="exampleInputPassword1" placeholder="密码" ref="password"
+              <input type="password" className="form-control" id="exampleInputPassword" placeholder="密码" ref="password"
                      default=""  onFocus={this.focusPassword.bind(this)}/>
               <p className=" text-danger" >{this.state.errPasswordMessage}</p>
             </div>
             <div className="form-group">
-              <input type="password" className="form-control" id="exampleInputPassword1" placeholder="再次确认密码" ref="passwordAgain"
+              <input type="password" className="form-control" id="exampleInputPassword" placeholder="再次确认密码" ref="passwordAgain"
                      default=""  onFocus={this.focusPassword.bind(this)}/>
               <p className=" text-danger" >{this.state.errPasswordMessage}</p>
             </div>
             <div className="form-group">
-              <input type="text" className="form-control" id="exampleInputPassword1" placeholder="联系方式" ref="tel"
+              <input type="text" className="form-control" id="exampleInputPassword" placeholder="联系方式" ref="tel"
                      default=""  onFocus={this.focusTel.bind(this)}/>
               <p className=" text-danger" >{this.state.errTelMessage}</p>
             </div>
-            <button type="button" className="btn btn-default" onClick={this.click.bind(this)}>注 册</button>
+            <button type="button" id='register-btn' className="btn btn-success" onClick={this.click.bind(this)}>注 册</button>
           </form>
         </div>
     );

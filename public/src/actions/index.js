@@ -50,6 +50,7 @@ export const initHomePage=()=> {
   return {
     type: 'INIT_HOMEPAGE'
   };
+}
 
 export const sendMessage = (data)=>{
   return {
@@ -178,11 +179,7 @@ export const  resetRegister = ()=>{
   return {
     type:'RESET_REGISTER',
     isPromised:false
-  }
-};
-
-
-
+  };
 };
 
 export const MENUDETAIL_LOADED = 'MENUDETAIL_LOADED';

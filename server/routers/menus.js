@@ -64,12 +64,13 @@ router.get('/user/:userId',(req,res)=>{
 });
 
 router.get('/', (req, res)=> {
-  Menus.find({}, {},{limit:9}, (err, data)=> {
-    res.status(200).send(data);
-  Menus.find({}).sort({_id:-1}).limit(9).exec(function(err, data) {
-    res.send(data);
+    Menus.find({}).sort({_id: -1}).limit(9).exec(function (err, data) {
+      res.send(data);
+    });
   });
-});
+
+
+
 router.get('/homePage',(req,res) =>{
   Menus.find({}).sort({_id:-1}).limit(3).exec(function (err,data) {
     res.send(data);

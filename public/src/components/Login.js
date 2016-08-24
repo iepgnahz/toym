@@ -39,21 +39,19 @@ class Login extends React.Component {
   render() {
     console.log(this.props.loginUserErrShowed);
     return (
-        <div className=" row col-xs-offset-4 col-xs-4 text-center">
-          <div className="page-header">
+        <div >
+          <div >
           <h1 className = 'text-center'> 烹然心动 </h1>
           </div>
-          <form>
+          <form id="homePage-form">
             <div className="form-group">
-              <label htmlFor="exampleInputEmail1">用户名 : </label>
               <input type="text" className="form-control" id="exampleInputEmail1" placeholder="用户名" ref="username" onFocus={this.focus.bind(this)} />
             </div>
             <div className="form-group">
               <input type="password" className="form-control" id="exampleInputPassword1" placeholder="密码" ref="password" onFocus={this.focus.bind(this)}/>
-              <p>{this.props.loginUserErrShowed}</p>
+              <span>{this.props.loginUserErrShowed}</span>
             </div>
-            <button type="button" className="btn btn-default" onClick={this.click.bind(this)}>登 录</button>
-            <button type="button" className="btn btn-default" ><Link to="/register">注 册</Link></button>
+            <button type="button" className="btn btn-success" onClick={this.click.bind(this)}>登 录</button>
           </form>
         </div>
     )

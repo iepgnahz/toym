@@ -1,178 +1,150 @@
-/*logo..start*/
-
-#header {
-    display: block;
-    width: 80%;
-    height: 150px;
-    margin-bottom: 20px;
-    position: relative
-}
-
-div#logo {
-    height: 28px;
-    position: absolute;
-    top: 35px;
-    left: 0;
-    font-size: 25px;
-    font-family: AlexonBoldRegular, sans-serif;
-    background: url(../image/images/2.jpg) no-repeat 0 50%
-}
-
-div#logo a {
-    line-height: 28px;
-    padding-left: 35px;
-    font-weight: bold;
-    color: #1275ba
-}
-
-div.main-menu-block {
-    position: absolute;
-    right: 0;
-    top: 35px;
-}
-
-ul#main-menu {
-    list-style: none;
-}
-
-ul#main-menu li {
-    float: left;
-    position: relative
-}
-
-ul#main-menu li a {
-    display: block;
-    font: 18px HelveticaLTStdBold, sans-serif;
-    min-width: 100px;
-    height: 40px;
-    text-align: center;
-    line-height: 30px
-}
-
-ul#main-menu li a:hover {
-    color: #1275ba;
-    background: url(../image/images/menu_hover.png) no-repeat;
-}
-
-ul#main-menu li a.active-state {
-    color: #1275ba;
-    background: url(../image/images/menu_hover.png) no-repeat;
-}
-
-
-/*logo end*/
-#app {
-    margin-top: 20px;
-    margin-bottom: 30px;
+#app{
+  margin-top:20px;
+  margin-bottom:30px;
 }
 
 #name1 {
-    width: 130px;
-    height: 30px;
-    overflow: hidden;
-    text-align: left;
-    font-size: 22px;
+  width:130px;
+  height:30px;
+  overflow: hidden;
+  text-align:left;
+  font-size: 22px;
 }
-
-.food-body {
-    width: 80%;
-    margin: auto;
+.food-body{
+  width:80%;
+  margin: auto;
 }
-
 #food-description {
-    text-align: left;
-    font-size: 16px;
+  text-align: left;
+  font-size: 16px;
 }
 
 #date1 {
-    width: 130px;
-    height: 30px;
-    overflow: hidden;
-    text-align: right;
-    font-size: 15px;
+  width:130px;
+  height:30px;
+  overflow: hidden;
+  text-align:right;
+  font-size: 15px;
 }
-
-#count {
-    margin-left: 35px;
+#count{
+  margin-left:35px;
 
 }
 
 .material-input {
-    height: 31px;
-}
-
-.food-body{
-  width:80%;
-  margin:auto;
-}
-.material-input{
   height:31px;
 }
-#display-message{
-  font-size: 12px;
-  color:crimson;
+
+#navbg{
+  background-color:#d5d5d5;
+  font-weight:bold;
+  margin: 0;
 }
 
-#count{
-  margin-left: 35px;
+body{
+    background-image: url("../image/bg9.png");
 }
 
-#btn{
-  margin-right: 0px;
-}
-
-
-#picture-sliding {
+#homePage-form{
     position: relative;
-    z-index: -1;
-    width: 100%;
-    height: 400px;
+    width: 35%;
     margin: auto;
+    text-align: center;
+    border-radius: 15px;
+    margin-left: 40%;
 }
 
-#btn_1{
-  font-size: 40px;
-  position:absolute;
-  opacity: 0.5;
-  z-index: 3;
-  top: 60%;
-}
-#btn_2{
-    font-size:40px;
-    position: absolute;
-    opacity: 0.5;
-    z-index: 3;
-    top: 60%;
-    right:18%;
+input[type="text"] {
+    margin: auto;
+    width: 70%;
+    padding: 1em 2em 1em 3em;  /*留白*/
+    color: #9199aa;
+    font-size: 18px;  /*文字大小*/
+    outline: none;    /*轮廓*/
+    background-color: inherit;  /*透明*/
+    border: none;
+    font-weight: 100; /*字体加粗*/
+    border-bottom: 1px solid#484856;  /*下边框的样式*/
+    border-top: 1px solid#484856;
+    border-left: 1px solid#484856;
+    border-right:1px solid#484856;
+    margin-top: 2em;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
-#showword h3:hover{
-    color:#00b3ee;
+#exampleInputEmail1{
+    width: 100%;
 }
 
-#showword h3{
+#exampleInputPassword1{
+    width: 100%;
+}
+input[type="password"]{
+    width: 70%;
+    padding: 1em 2em 1em 3em;
+    color: #dd3e3e;
+    font-size: 18px;
+    outline: none;
+    background-color: inherit;
+    border: none;
+    font-weight: 100;
+    border-bottom: 1px solid#484856;
+    border-top: 1px solid#484856;
+    border-left: 1px solid#484856;
+    border-right:1px solid#484856;
+    margin-bottom: 3em;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+::-webkit-input-placeholder {
+    color: red;
+}
+
+#homepage{
+    /*background-color: #00b3ee;*/
+}
+
+#exampleInputEmail{
+    margin: auto;
+    margin-top: 5%;
+    position: relative;
+    width: 30%;
+    text-align: center;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#exampleInputPassword{
+    position: relative;
+    margin: auto;
+    margin-top: 2%;
+    width: 30%;
+    text-align: center;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#register-btn{
+    position: relative;
+    margin-top: 1%;
+    margin-left: 57%;
+}
+
+.text-danger{
+    margin-right: 20%;
+    float: right;
     font-weight: 700;
 }
 
-#showword{
-    margin: 30px auto;
+#errMessage{
+    color:red;
+    font-weight: 700;
 }
-
-#test{animation:change 5s linear 0s infinite;font-size:30px;font-weight:700;}
-@keyframes change{0%{color:#000000;}25%{color:#00b3ee;}50%{color:#b10dc9;}75%{color:#01ff70;}100% {color:#ff851b;}}
-
-#imageshow{
-    transition:All 0.4s ease-in-out;
-    -webkit-transition:All 0.4s ease-in-out;
-    -moz-transition:All 0.4s ease-in-out;
-    -o-transition:All 0.4s ease-in-out;
-}
-
-#imageshow:hover {
-    transform:rotate(360deg);
-    -webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
-    -ms-transform:rotate(360deg);
-}
-
