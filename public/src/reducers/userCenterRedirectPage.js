@@ -4,7 +4,10 @@
 var userCenterRedirectPage = function (state=false,action) {
   switch (action.type){
     case 'USERCENTERPAGE_REDIRECTED':
+      console.log('aaaa')
       return action.isJumped;
+    case 'RESET_USERCENTERINTRO_STATE':
+        return false;
   }
   return false;
 };
