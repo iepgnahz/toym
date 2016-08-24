@@ -6,7 +6,8 @@ const Menus = mongoose.model('Menus', {
   date: String,
   description: String,
   materials: Array,
-  steps: String
+  steps: String,
+  user:String
 });
 
 export default Menus;
