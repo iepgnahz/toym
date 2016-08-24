@@ -1,11 +1,12 @@
 /**
  * Created by zhangpei on 16/8/22.
  */
-var loginUserErrshowed = function (state = '', action) {
+var loginUserErrShowed = function (state ='', action) {
   switch (action.type){
     case 'LOGINUSERERR_SHOWED':
       return action.err
   }
+  return state
 };
 
-export default loginUserErrshowed
+export default loginUserErrShowed
