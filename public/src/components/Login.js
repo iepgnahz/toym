@@ -27,16 +27,17 @@ class Login extends React.Component {
       if(nextProps.loginJumped.isJumped) {
 
         this.props.resetLogin();  //我一旦点击登录,页面重新渲染必然执行componentWillUpdate,所以会导致当你已经登录成功的时候,已经把isJUMPed设置为了true,会一直保持true的状态,所以又跳转到用户中心
-        this.props.router.push(`/userCenter/${nextProps.loginJumped.username}`);
+        this.props.router.push(`/userCenter`);
       }
     }
   }
 
   focus(){
-    this.props.loginUserErrShowed('');
+    this.props.loginUserErrShowedDis('');
   }
 
   render() {
+    console.log(this.props.loginUserErrShowed);
     return (
         <div className=" row col-xs-offset-4 col-xs-4 text-center">
           <div className="page-header">
@@ -71,7 +72,7 @@ const mapDispatchToProps = (dispatch)=> ({
     dispatch(sendMessage(data));
   },
 
-  loginUserErrShowed: (err)=>{
+  loginUserErrShowedDis: (err)=>{
     dispatch(loginErrShowed(err))
   },
 
