@@ -126,12 +126,9 @@ export const getUserCenterMessage = ()=>{
     request
         .get('/menus/confirmUserCenter')
         .end((err,res)=>{
-          if(res.status === 200){
-            console.log('cccc')
+          if(res.text !== ''){
             dispatch(receiveUserCenterMessage(true,res.text));
-          }
-          if(err){
-            console.log('dddds')
+          }else{
             dispatch({
               type:'USERCENTERPAGE_REDIRECTED',
               isJumped:true

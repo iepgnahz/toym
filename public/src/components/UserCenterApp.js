@@ -21,17 +21,15 @@ class UserCenterApp extends Component {
   }
 
   render() {
+    console.log(this.props.userCenterMessageLoaded.username)
     return (
         <div className="food-body">
-          <UserIntroduce userId={this.props.params.userId}/>
-          <UserMenu userId={this.props.params.userId}/>
+          <UserIntroduce userId={this.props.userCenterMessageLoaded.username}/>
         </div>
     )
   }
 }
 var mapStateToProps = (state)=> {
-
-
   return state;
 };
 
