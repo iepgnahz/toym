@@ -21,6 +21,7 @@ const sendMessageRequestMiddleware = store => next => action =>{
             //   })
             // }
             if(res.status === 501){
+              console.log('1234543')
               store.dispatch({
                 type: 'LOGINUSERERR_SHOWED',
                 err: res.body.err
