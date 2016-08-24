@@ -9,6 +9,21 @@ let router = express.Router();
 
 router.use(cookieParser());
 
+router.get('/confirmUserCenter',(req,res)=>{
+
+  if(req.cookies.user){
+    Session.findOne({randomId:req.cookies.user},(err,doc)=>{
+      if(err){
+        res.status(403).send('');
+      }else {
+        res.status(200).send(doc.username)
+      }
+    })
+  } else {
+    res.status(403).send('');
+  }
+});
+
 router.get('/confirmUpload',(req,res)=>{
   if(req.cookies.user){
     Session.findOne({randomId:req.cookies.user},(err,doc)=>{
@@ -24,21 +39,7 @@ router.get('/confirmUpload',(req,res)=>{
 });
 
 
-router.get('/confirmUserCenter',(req,res)=>{
 
-  if(req.cookies.user){
-    Session.findOne({randomId:req.cookies.user},(err,doc)=>{
-      if(err){
-
-        res.status(403);
-      }else {
-        res.status(200).send(doc.username)
-      }
-    })
-  } else {
-    res.status(403);
-  }
-});
 
 router.get(`/userWorks/:userId`,(req,res)=>{
   Menus.find({user:req.params.userId},(err,doc)=>{
