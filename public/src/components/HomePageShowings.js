@@ -1,9 +1,7 @@
 import React from 'react';
 import HomePageItem from './HomePageItem';
-import Logo from './Logo';
 import SliderPicture from './SliderPicture';
 import {Link} from 'react-router';
-import Footer from './Footer';
 
 
 class HomePageShowings extends React.Component {
@@ -16,7 +14,7 @@ class HomePageShowings extends React.Component {
     let homePage = this.props.homePage;
     return (
         <div>
-          <Logo/>
+
           <div className="food-body">
             <SliderPicture/>
             <div id='showword' className="text-center">
@@ -42,7 +40,7 @@ class HomePageShowings extends React.Component {
               </div>
             </div>
           </div>
-          <Footer/>
+
         </div>
     );
   }

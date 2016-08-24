@@ -23,6 +23,7 @@ import checkUserRequestMiddleware from './middlewares/checkUserRequestMiddleware
 import Background from './components/Background';
 import getUserMessageMiddleware from './middlewares/getUserMessageMiddleware';
 import userWorksRequestMiddleware from './middlewares/userWorksRequestMiddleware';
+import HomePageList from './container/HomePageList';
 
 
 const store = createStore(
@@ -39,7 +40,7 @@ render(
     <Provider store={store}>
       <Router history={browserHistory}>
         <Route path="/" component={AppRoot}>
-          <IndexRoute component={HomePageApp} />
+          <IndexRoute component={HomePageList} />
           <Route path="in" component={Background}>
             <Route path="login" component={LoginPackage}/>
             <Route path="register" component={Register}/>

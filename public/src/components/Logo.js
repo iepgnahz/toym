@@ -5,31 +5,54 @@ class Logo extends Component {
 
   render() {
     return (
-        <div className="food-body">
-          <nav className="navbar navbar-default" role="navigation">
-            <div className="row" id="navbg">
-              <div className="navbar-header">
-                <img src="../../image/logo.jpg" />
-              </div>
-              <div>
-                <ul className="nav navbar-nav">
-                  <li><Link to="/">首页</Link></li>
-                  <li><Link to="/menu">菜品动态</Link></li>
-                  <li><Link to="/menuUpLoad">上传菜谱</Link></li>
-                  <li><Link to="/userCenter">个人中心</Link></li>
-                </ul>
-              </div>
-              <div style={{float: 'right', marginRight: '5%'}}>
-                <ul className="nav navbar-nav">
-                  <li><Link to="/in/login">登录</Link></li>
-                  <li><Link to="/in/register">注册</Link></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+        <div id="header" className="grid-clear food-body">
+          <div className="grid" id="logo">
+            <a href=" " className="settings-text">
+              Cook In My Life
+            </a >
+          </div>
+          <div className="grid main-menu-block">
+            <ul id="main-menu">
+              <li className="settings-txt"><Link to="/">Home</Link></li>
+              <li className="settings-txt"><Link to="/menu">Menus</Link></li>
+              <li className="settings-txt"><Link to="/menuUpLoad">Upload</Link></li>
+              <li className="settings-txt"><Link to="/userCenter">About ME</Link></li>
+              <li className="settings-txt"><Link to="/in/login">Log In</Link></li>
+              <li className="settings-txt"><Link to="/in/register">Register</Link></li>
+            </ul>
+          </div>
         </div>
+
     );
   }
 }
+
+// class Logo extends Component {
+//
+//   render() {
+//     return (
+//         <div id="header" className="grid-clear food-body">
+//           <div className="grid" id="logo">
+//             <a href=" " className="settings-text">
+//               Cook In My Life
+//             </a >
+//           </div>
+//           <div className="grid main-menu-block">
+//             <ul id="main-menu">
+//               <li className="settings-txt"><Link to="/homePage">Home</Link></li>
+//               <li className="settings-txt"><Link to="/">About ME</Link></li>
+//               <li className="settings-txt"><Link to="/menu">Menus</Link></li>
+//               <li className="settings-txt"><Link to="/menuUpload">Upload</Link></li>
+//               <li className="settings-txt"><Link to="/">Log In</Link></li>
+//               <li className="settings-txt"><Link to="/">Register</Link></li>
+//             </ul>
+//           </div>
+//         </div>
+//     );
+//   }
+// }
+//
+// export default Logo;
+
 
 export default Logo;
