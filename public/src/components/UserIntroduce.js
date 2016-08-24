@@ -13,6 +13,7 @@ class UserIntroduce extends Component {
   }
   
   componentWillUpdate(nextProps){
+      console.log('render'+this.props.userCenterMessageLoaded.username)
     if(nextProps.userCenterMessageLoaded.username){
       this.props.getUserCenterMessage(nextProps.userCenterMessageLoaded.username);
       this.props.getUserWorks(nextProps.userCenterMessageLoaded.username);
@@ -22,10 +23,12 @@ class UserIntroduce extends Component {
 
 
   render() {
+
     let userMenu = this.props.selfWorksGetted || [];
     let userMessage = this.props.userDisplayed || {username: '', tel: ''};
 
     return (
+
         <div >
           <div className="container">
             <div className="col-md-2 text-center">
