@@ -7,6 +7,7 @@ var userCenterRedirectPage = function (state=false,action) {
       console.log('aaaa')
       return action.isJumped;
     case 'RESET_USERCENTERINTRO_STATE':
+      console.log('res')
         return false;
   }
   return false;
