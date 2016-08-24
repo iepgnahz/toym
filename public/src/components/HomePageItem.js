@@ -8,7 +8,7 @@ class HomePageItem extends Component{
           <div className="text-center col-sm-6 col-md-4">
             <div  className="thumbnail">
               <Link to={'/menuDetail/' + id} className="text-center " >
-                <img src={image} alt="..." style={{height: '180px'}}/>
+                <img id="imageshow" src={image} alt="..." style={{height: '180px'}}/>
               </Link>
               <div className="caption row">
                 <div className="col-md-6" id="name1">{name}</div>

@@ -121,11 +121,12 @@ ul#main-menu li a.active-state {
 }
 
 
-#picture-sliding{
-  z-index: -1;
-  width:100%;
-  height:400px;
-  margin:auto;
+#picture-sliding {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 400px;
+    margin: auto;
 }
 
 #btn_1{
@@ -133,14 +134,14 @@ ul#main-menu li a.active-state {
   position:absolute;
   opacity: 0.5;
   z-index: 3;
-  top: 45%;
+  top: 60%;
 }
 #btn_2{
     font-size:40px;
     position: absolute;
     opacity: 0.5;
     z-index: 3;
-    top: 45%;
+    top: 60%;
     right:18%;
 }
 
@@ -156,20 +157,21 @@ ul#main-menu li a.active-state {
     margin: 30px auto;
 }
 
-
-
-#logos ul li{
- font-size: 18px;
- font-weight: 700;
-}
-
 #test{animation:change 5s linear 0s infinite;font-size:30px;font-weight:700;}
 @keyframes change{0%{color:#000000;}25%{color:#00b3ee;}50%{color:#b10dc9;}75%{color:#01ff70;}100% {color:#ff851b;}}
 
+#imageshow{
+    transition:All 0.4s ease-in-out;
+    -webkit-transition:All 0.4s ease-in-out;
+    -moz-transition:All 0.4s ease-in-out;
+    -o-transition:All 0.4s ease-in-out;
+}
 
-
-body{
-    background:url("../image/bg.jpg");
-    background-size: 100%;
+#imageshow:hover {
+    transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
 }
 
