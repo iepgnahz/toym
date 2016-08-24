@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import HomePageItem from './HomePageItem';
 import Logo from './Logo';
 import SliderPicture from './SliderPicture';
@@ -6,7 +6,7 @@ import {Link} from 'react-router';
 import Footer from './Footer';
 
 
-class HomePageShowings extends Component {
+class HomePageShowings extends React.Component {
 
   componentDidMount() {
     this.props.init_HomePage();
@@ -44,7 +44,7 @@ class HomePageShowings extends Component {
           </div>
           <Footer/>
         </div>
-    )
+    );
   }
 }
 export default HomePageShowings;

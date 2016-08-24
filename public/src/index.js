@@ -7,11 +7,11 @@ import {Provider} from 'react-redux';
 import menuRequestMiddleware from './middlewares/menuRequestMiddleware';
 import menuDetailRequestMiddleware from './middlewares/menuDetailRequestMiddleware';
 import MenuDetailPackage  from './components/MenuDetailApp';
-import {Router, Route, browserHistory,IndexRoute } from 'react-router';
+import {Router, Route, browserHistory} from 'react-router';
 import MenuUpLoadAppPackage from './components/MenuUpLoadApp';
 import uploadRequestMiddleware from './middlewares/upLoadRequestMiddleware';
 import HomePageList from './container/HomePageList';
-import AppRoot from './components/AppRoot';
+
 
 import homePageMiddleware from './middlewares/homePageMiddleware';
 const store = createStore(

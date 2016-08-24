@@ -7,12 +7,12 @@ let router = express.Router();
 router.get('/', (req, res)=> {
   Menus.find({}).sort({_id:-1}).limit(9).exec(function(err, data) {
     res.send(data);
-  })
+  });
 });
 router.get('/homePage',(req,res) =>{
   Menus.find({}).sort({_id:-1}).limit(3).exec(function (err,data) {
     res.send(data);
-  })
+  });
 });
 
 router.get('/:id', (req, res)=> {

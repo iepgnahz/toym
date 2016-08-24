@@ -1,6 +1,3 @@
-/**
- * Created by zhangpei on 16/8/17.
- */
 'use strict';
 import React from 'react';
 import MaterialItem from './MaterialItem';

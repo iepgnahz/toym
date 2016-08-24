@@ -1,8 +1,8 @@
-import  React ,{Component} from 'react';
+import  React from 'react';
 import {Link} from 'react-router';
-class HomePageItem extends Component{
+class HomePageItem extends React.Component{
   render(){
-   let {id,name,date,description,image}=this.props;
+    let {id,name,date,description,image}=this.props;
     return (
         <div>
           <div className="text-center col-sm-6 col-md-4">
@@ -18,7 +18,7 @@ class HomePageItem extends Component{
             </div>
           </div>
         </div>
-    )
+    );
   }
 }
 export default HomePageItem;
