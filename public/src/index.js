@@ -47,7 +47,7 @@ render(
           <Route path="menu" component={App}/>
           <Route path='menuDetail/:id' component={MenuDetailPackage}/>
           <Route path='menuUpLoad' component={MenuUpLoadAppPackage}/>
-          <Route path="userCenter" component={UserCenterAppPackage}/>
+          <Route path="userCenter/:userId" component={UserCenterAppPackage}/>
         </Route>
       </Router>
     </Provider>,
