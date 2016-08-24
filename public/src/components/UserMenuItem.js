@@ -13,7 +13,7 @@ class UserMenuItem extends Component {
     let {name, image, date, description, id} = this.props;
 
     return (
-        <div className="food-body">
+        <div >
           <div className="text-center col-sm-6 col-md-4">
             <div className="thumbnail">
               <Link to={'/menuDetail/' + id} className="text-center " >
