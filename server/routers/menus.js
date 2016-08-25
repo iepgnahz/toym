@@ -39,16 +39,19 @@ router.get('/confirmUpload',(req,res)=>{
 });
 
 
-
-
-router.get(`/userWorks/:userId`,(req,res)=>{
-  Menus.find({user:req.params.userId},(err,doc)=>{
-      if(doc){
-        res.status(200).send(doc)
-      } else {
-        res.status(404)
-      }
+/*router.get('/', (req, res)=> {
+  Menus.find({}).sort({_id: -1}).limit(9).exec(function (err, data) {
+    res.send(data);
   });
+});*/
+router.get('/userWorks/:userId',(req,res)=> {
+  Menus.find({user:req.params.userId}).sort({_id:-1}).limit(6).exec(function(err,doc){
+    if(doc){
+      res.status(200).send(doc);
+    } else {
+      res.status(404)
+    }
+  })
 });
 
 
