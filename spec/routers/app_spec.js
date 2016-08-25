@@ -521,7 +521,8 @@ describe('get /menus',() => {
               + '8. 五成热时下泡椒和浆好的肉丝炒开，炒开立刻放葱姜蒜炒香，然后放入焯过的冬笋丝和木耳丝，最后倒入味汁，再炒几下就可以了\n'
 
             }];
-            let expectResult=[res.body[0],res.body[1]];
+            let temp=res.body.length;
+            let expectResult = [res.body[temp-1], res.body[temp-2]];
             expect(expectResult).toEqual(result);
             done();
           }
