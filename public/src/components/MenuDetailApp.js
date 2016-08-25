@@ -20,7 +20,6 @@ class MenuDetailApp extends Component {
         <div className="container">
           {/*<Logo/>*/}
           <MenuDetail menuItem={this.props.menuItem}/>
-          <Footer/>
         </div>
     );
   }

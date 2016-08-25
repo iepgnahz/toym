@@ -34,6 +34,7 @@ class MenuUpLoadApp extends Component {
 
   click() {
     let name = this.refs.nameInput.value;
+    let user = this.props.userMessageLoaded.username;
     let description = this.refs.descriptionInput.value;
     let steps = this.refs.stepsInput.value;
     let materials = this.props.materialUploaded;
@@ -41,6 +42,7 @@ class MenuUpLoadApp extends Component {
     let date = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()}`;
     let image = this.props.loadImage;
     let menuItem = {
+      user:user,
       name: name,
       image: image.file,
       description: description,
