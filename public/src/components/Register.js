@@ -71,31 +71,33 @@ class Login extends React.Component {
 
   render() {
     return (
-        <div >
-          <div >
+        <div>
             <h1 className='text-center'> 烹然心动 </h1>
-          </div>
           <form>
-            <div className="form-group">
+            <div>
               <input type="text" className="form-control" id="exampleInputEmail" placeholder="用户名" ref="username"
                      default=""  onFocus={this.focusUserName.bind(this)}/>
-              <p className=" text-danger" >{this.state.errUserMessage}</p>
-              <p className=" text-danger" >{this.props.registerErrShowed}</p>
+              <label className=" text-danger" >{this.state.errUserMessage}</label>
+              <label className=" text-danger" >{this.props.registerErrShowed}</label>
+              <br/><br/>
             </div>
-            <div className="form-group">
+            <div>
               <input type="password" className="form-control" id="exampleInputPassword" placeholder="密码" ref="password"
                      default=""  onFocus={this.focusPassword.bind(this)}/>
-              <p className=" text-danger" >{this.state.errPasswordMessage}</p>
+              <label className="text-danger" >{this.state.errPasswordMessage}</label>
+              <br/><br/>
             </div>
-            <div className="form-group">
+            <div>
               <input type="password" className="form-control" id="exampleInputPassword" placeholder="再次确认密码" ref="passwordAgain"
                      default=""  onFocus={this.focusPassword.bind(this)}/>
-              <p className=" text-danger" >{this.state.errPasswordMessage}</p>
+              <label className=" text-danger" >{this.state.errPasswordMessage}</label>
+              <br/><br/>
             </div>
-            <div className="form-group">
+            <div>
               <input type="text" className="form-control" id="exampleInputPassword" placeholder="联系方式" ref="tel"
                      default=""  onFocus={this.focusTel.bind(this)}/>
-              <p className=" text-danger" >{this.state.errTelMessage}</p>
+              <label className=" text-danger" >{this.state.errTelMessage}</label>
+              <br/><br/>
             </div>
             <button type="button" id='register-btn' className="btn btn-success" onClick={this.click.bind(this)}>注 册</button>
           </form>
