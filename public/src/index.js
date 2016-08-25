@@ -24,11 +24,11 @@ import Background from './components/Background';
 import getUserMessageMiddleware from './middlewares/getUserMessageMiddleware';
 import userWorksRequestMiddleware from './middlewares/userWorksRequestMiddleware';
 import HomePageList from './container/HomePageList';
-
+import homePageMiddleware from './middlewares/homePageMiddleware';
 
 const store = createStore(
     resultList,
-    applyMiddleware(thunkMiddleware,createLogger(),menuRequestMiddleware,menuDetailRequestMiddleware,uploadRequestMiddleware,sendMessageRequestMiddleware,checkUserRequestMiddleware,getUserMessageMiddleware,userWorksRequestMiddleware)
+    applyMiddleware(thunkMiddleware,createLogger(),menuRequestMiddleware,menuDetailRequestMiddleware,uploadRequestMiddleware,sendMessageRequestMiddleware,checkUserRequestMiddleware,getUserMessageMiddleware,userWorksRequestMiddleware,homePageMiddleware)
 );
 
 store.dispatch({
