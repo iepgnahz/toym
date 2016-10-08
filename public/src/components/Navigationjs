@@ -1,0 +1,27 @@
+import React ,{Component} from 'react';
+
+class Navigate extends Component{
+  render(){
+    return(
+        <div id="header" className="grid-clear food-body">
+          <div className="grid" id="logo">
+            <a href=" " className="settings-text">
+              Cook In My Life
+            </a >
+          </div>
+          <div className="grid main-menu-block">
+            <ul id="main-menu">
+              <li className="settings-txt">Home</li>
+              <li className="settings-txt">Menus</li>
+              <li className="settings-txt">Uploaded</li>
+              <li className="settings-txt">About me</li>
+              <li className="settings-txt">Login in</li>
+              <li className="settings-txt">Register</li>
+            </ul>
+          </div>
+        </div>
+
+    )
+  }
+}
+export default Navigate;

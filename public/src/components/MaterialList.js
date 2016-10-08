@@ -1,66 +1,36 @@
-import React, {Component} from 'react'; // eslint-disable-line no-unused-vars
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {deleteMaterial} from '../actions/index';
+import MaterialItem from './MaterialItem';
 
 class MaterialList extends Component {
   render() {
-
-    let deleteMaterial = this.props.deleteMaterial;
-    let result = this.props.result || [];
-
-
+    let materials = this.props.materials || [];
     return (
-        <div style={{margin:'30px auto 50px auto'}}>
-          <table className="table table-bordered">
+        <div style={{marginTop: '20px'}}>
+          <h3>菜品用量</h3>
+          <table className="table table-striped table-bordered">
             <thead>
             <tr>
-              <th className="text-center">编号</th>
-              <th className="text-center">用料名称</th>
-              <th className="text-center">数量</th>
-              <th className="text-center">Delete</th>
+              <th>材料</th>
+              <th>数量</th>
             </tr>
             </thead>
             <tbody>
             {
-              result.map((v, k)=> {
-                return (
-                    <tr >
-                      <td>{k + 1}</td>
-                      <td>{v.source}</td>
-                      <td>{v.amount}</td>
-                      <td><a
-                          href="javascript: void(0)"
-                          onClick={()=> {
-                            deleteMaterial(k);
-                          }}
-                      >
-                       <b> 删除</b>
-                      </a></td>
-                    </tr>
-                );
+              materials.map((v, k)=> {
+                return <MaterialItem source={v.source} amount={v.amount}/>
               })
             }
             </tbody>
           </table>
         </div>
-
-    );
+    )
   }
 }
 
-const mapStateToProps = (state)=> ({
-  result: state.materialUploaded
-});
+const mapStateToProps = (state)=> {
+  return state.menudetails;
+};
 
-const mapDispatchToProps = (dispatch)=> ({
-  deleteMaterial: (id)=> {
-    dispatch(deleteMaterial(id));
-  }
-});
-
-const MaterialListPackage = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(MaterialList);
-
+const MaterialListPackage = connect(mapStateToProps)(MaterialList);
 export default MaterialListPackage;

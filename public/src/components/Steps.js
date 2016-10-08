@@ -1,37 +1,27 @@
-import React, {Component} from 'react';// eslint-disable-line no-unused-vars
+import React ,{Component} from 'react';
 import {connect} from 'react-redux';
-class Steps extends Component {
-  constructor(props) {
-    super(props);
-  }
 
+class Steps extends Component{
   rawMarkup(str) {
 
     if (str !== undefined) {
-      var rawMarkup = marked((str).toString()); // eslint-disable-line no-undef
+      var rawMarkup = marked((str).toString()); 
       return {__html: rawMarkup};
     }
   }
-
-  render() {
-    let {steps} = this.props;
-
-
+  render(){
+    let steps = this.props.steps;
     return (
-        <div >
+        <div>
           <h3>做法与步骤</h3>
           <div dangerouslySetInnerHTML={this.rawMarkup(steps)}></div>
         </div>
-    );
+    )
   }
-
 }
-
-
-
-
-var mapStateToProps = (state)=> {
-  return {steps: state.menuItem.steps};
+const mapStateToProps = (state)=>{
+  return state.menudetails;
 };
-var StepsPackage = connect(mapStateToProps)(Steps);
+//经过connect 操作后组件才能获取数据
+const StepsPackage = connect(mapStateToProps)(Steps);
 export default StepsPackage;

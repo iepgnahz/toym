@@ -1,12 +1,13 @@
-import React from 'react';
-import Logo from './Logo';
+import React,{Component} from 'react';
+import {Link} from 'react-router';
 import Footer from './Footer';
-class AppRoot extends React.Component{
+class AppRoot extends Component{
   render(){
     return (
-        <div>
-          <Logo/>
+        <div className="appRoot">
+          <p>我是一个导航</p>
           {this.props.children}
+          <div className="clearfix"></div>
           <Footer/>
         </div>
     );

@@ -1,15 +1,21 @@
-'use strict';
-import React from 'react';
-class Footer extends React.Component{
-  constructor(props){
-    super(props);
-  }
+import React,{Component} from 'react';
+
+class Footer extends Component{
   render(){
-    return(
-      <div className="food-body text-center" style={{margin:'50px auto',verticalAlign:'bottom',borderBottom:'1px solid #adadad'}}>
-        <p>Copyright &copy;2016 烹然心动PRXD.com 版权所有  |  消费者维权热线：4000600773</p>
-      </div>
-    );
+    return (
+        <footer id="footer">
+          <div className="container">
+            <div className="col-md-5 col-md-offset-3">
+              <span>Copyright © 2016.Company name All rights reserved.烹然心动</span>
+            </div>
+            <div id="gotop">
+              <img src="image/toTop.png"/>
+            </div>
+            <div className="clearfix"></div>
+          </div>
+        </footer>
+    )
   }
 }
+
 export default Footer;

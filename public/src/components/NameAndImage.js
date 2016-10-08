@@ -1,13 +1,10 @@
-/**
- * Created by zhangpei on 16/8/16.
- */
+//每个组件 不要爸爸传参数，自己连接 state.menudetails数据
 import React, {Component} from 'react';// eslint-disable-line no-unused-vars
 import {connect} from 'react-redux';
 class NameAndImage extends Component {
   constructor(props) {
     super(props);
   }
-
 
   render() {
     return (
@@ -18,7 +15,7 @@ class NameAndImage extends Component {
           </div>
           <div>
             <img src={'/'+this.props.image} className="text-center img-responsive form-control "
-                 style={{height: 500}}/>
+                 style={{height: 480}}/>
           </div>
           <h3>简介</h3>
           <p>{this.props.description}</p>
@@ -28,7 +25,7 @@ class NameAndImage extends Component {
 }
 
 var mapStateToProps = (state)=> {
-  return state.menuItem;
+  return state.menudetails;
 };
 
 

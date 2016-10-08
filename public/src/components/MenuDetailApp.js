@@ -1,46 +1,35 @@
-import React, {Component} from 'react'; // eslint-disable-line no-unused-vars
-import Logo from '../components/Logo';
-import MenuDetail from '../components/MenuDetail';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {loadMenuDetail} from '../actions/index';
-import Footer from './Footer';
+import NameAndImagePackage from './NameAndImage';
+import MaterialListPackage from './MaterialList';
+import Steps from './Steps';
 
 class MenuDetailApp extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
-    this.props.loadPage(this.props.params.id);
+    this.props.getMenuItemId(this.props.params.id);
   }
 
   render() {
-
     return (
-        <div className="container">
-          {/*<Logo/>*/}
-          <MenuDetail menuItem={this.props.menuItem}/>
+        <div className="food-body">
+          <NameAndImagePackage/>
+          <MaterialListPackage/>
+          <Steps/>
         </div>
-    );
+    )
   }
 }
-var mapStateToProps = (state)=> {
-
-  return state;
+const mapStateToProps = (state)=> {
+  return state.menudetails;
 };
 
-const mapDispatchToProps = (dispatch)=> ({
-
-  getMenuDetail: (data)=> {
-    dispatch(loadMenuDetail(data));
-  },
-
-  loadPage: (url)=>{
+const mapDispatchToProps = (dispatch)=>({
+  getMenuItemId: (id)=> {
     dispatch({
-      type:'INIT_MENUDETAIL',
-      url
-    });
+      type: 'INIT_MENUDETAIL',
+      id
+    })
   }
 });
-var MenuDetailPackage = connect(mapStateToProps, mapDispatchToProps)(MenuDetailApp);
-export default MenuDetailPackage;
+const MenuDetailAppPackage = connect(mapStateToProps, mapDispatchToProps)(MenuDetailApp);
+export default MenuDetailAppPackage;

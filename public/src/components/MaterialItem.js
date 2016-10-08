@@ -1,23 +1,16 @@
-/**
- * Created by zhangpei on 16/8/17.
- */
-'use strict';
-import React from 'react';
+//因为一个表格有好多行：1对多
+//所以每一行        组件
+import React ,{Component} from 'react';
 
-class MaterialItem extends React.Component {
-  render() {
-    let {source} = this.props;
-    let {amount} = this.props;
-
+class MaterialItem extends Component{
+  render(){
+    let {source,amount}= this.props;
     return (
-
-        <tr>
-          <td> {source} </td>
-          <td> {amount} </td>
-        </tr>
-
-
-    );
+          <tr>
+            <td>{source}</td>
+            <td>{amount}</td>
+          </tr>
+    )
   }
 }
 export default MaterialItem;
